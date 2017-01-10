@@ -1,0 +1,20 @@
+div
+  .row
+    .col-sm-3.form-group
+      label.control-label Type
+      div(data-fields='subscriber')
+    .col-sm-3.form-group
+      label.control-label Nom
+      div(data-fields='subscriberName')
+    .col-sm-3.form-group
+      label.control-label Téléphone
+      div(data-fields='subscriberPhone')
+    .col-sm-3.form-group
+      label.control-label Email
+      div(data-fields='subscriberEmail')
+  .row
+    .col-sm-3
+    .col-sm-3
+    .col-sm-3
+      a.btn.btn-block.btn-warning(data-actions='save') Enregistrer
+    .col-sm-3(data-actions='print')

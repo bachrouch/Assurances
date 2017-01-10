@@ -1,0 +1,19 @@
+.row
+  .col-sm-3.form-group
+    label.control-label Nature
+    .form-control-static(data-values='kind')!= '<%= kind %>'
+  .col-sm-3.form-group
+    label.control-label Fractionnement
+    .form-control-static(data-values='billingFrequency')!= '<%= billingFrequency %>'
+  .col-sm-3.form-group
+    label.control-label Date d'effet
+    .form-control-static(data-values='effectiveDate')!= '<%= _.beautifyDate(effectiveDate) %>'
+  .col-sm-3.form-group
+    label.control-label Date d'échéance
+    .form-control-static(data-values='termDate')!= '<%= _.beautifyDate(termDate) %>'
+  .col-sm-3.form-group
+    label.control-label Date d'effet
+    .form-control-static(data-values='beginDate')!= '<%= _.beautifyDate(beginDate) %>'
+  .col-sm-3.form-group
+    label.control-label Date d'expiration
+    .form-control-static(data-values='endDate')!= '<%= _.beautifyDate(endDate) %>'

@@ -1,0 +1,26 @@
+mixin savings_policy_form_terms(obj)
+  form(role='form',
+    ng-controller='SavingsPolicyTermsCtrl',
+    ng-init='init("' + obj + '")',
+    ng-submit='addTerm()', novalidate)
+    table.table
+      tr
+        th.col-sm-4 Evènement
+        th.col-sm-4 Type
+        th.col-sm-3 Capital
+        th.col-sm-1 Action
+      tr(ng-repeat='t in terms')
+        td {{t.evt | termEvt}}
+        td {{t.type | termType}}
+        td {{t.cap | currency : 'DT' : 0}}
+        td.center-block
+          button.btn.btn-danger.btn-xs(ng-click='delTerm($index)'): i.glyphicon.glyphicon-remove
+      tr
+        td: select.form-control(ng-model='cur.evt',
+              ng-options='v.code as v.label for v in enums.term.evts')
+        td: select.form-control(ng-model='cur.type',
+              ng-options='v.code as v.label for v in enums.term.types')
+        td: input.form-control(type='number', min=0,
+              ng-model='cur.cap')
+        td.center-block
+          button.btn.btn-success.btn-xs(type='submit'): i.glyphicon.glyphicon-plus

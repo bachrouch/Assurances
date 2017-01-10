@@ -1,0 +1,13 @@
+table.table
+  thead
+    tr
+      th Cont. Nette
+      th Frais
+      th FGA
+      th Cont. TTC
+  tbody
+    tr
+      td!= '<%= _.beautifyAmount(premium) %>'
+      td!= '<%= _.beautifyAmount(fees) %>'
+      td!= '<%= _.beautifyAmount(taxes) %>'
+      td: strong!= '<%= _.beautifyAmount(totalPremium()) %> TTC'

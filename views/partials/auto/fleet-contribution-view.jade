@@ -1,0 +1,16 @@
+.row
+  .col-sm-3.form-group
+    label.control-label Contribution Nette
+    .form-control-static(data-values='premium')!= '<%= _.beautifyAmount(premium) %>'
+  .col-sm-2.form-group
+    label.control-label Frais
+    .form-control-static(data-values='fees')!= '<%= _.beautifyAmount(fees) %>'
+  .col-sm-2.form-group
+    label.control-label Taxes
+    .form-control-static(data-values='taxes')!= '<%= _.beautifyAmount(taxes) %>'
+  .col-sm-2.form-group
+    label.control-label Timbres
+    .form-control-static(data-values='stamps')!= '<%= _.beautifyAmount(stamps) %>'
+  .col-sm-3.form-group
+    label.control-label Contribution TTC
+    .form-control-static(data-values='totalContribution')!= '<%=  _.beautifyAmount(totalContribution) %>'

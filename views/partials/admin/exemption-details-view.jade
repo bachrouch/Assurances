@@ -1,0 +1,18 @@
+table.table.summary
+  tr
+    th.receipt Intermédiaire
+    td.receipt!= '<%= getPos() %>'
+  tr
+    th.receipt Utilisateur
+    td.receipt!= '<%= getCreator() %>'
+  tr
+    th.receipt Création
+    td.receipt!= '<%= _.beautifyDate(getCreationDate())%>'
+  tr
+    th.receipt Context
+    td.receipt!= '<%= msg %>'
+  tr
+    th.receipt Liste des quittances à reporter
+    td
+      a(type = 'button' ,data-actions='receiptsToReport')
+        span.glyphicon.glyphicon-th-list.btn-success.btn-sm

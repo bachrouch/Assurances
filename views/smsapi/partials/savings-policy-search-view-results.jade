@@ -1,0 +1,38 @@
+div
+  table.table.table-striped
+    thead
+      tr
+
+        th Référence
+        th Numéro Bordoreau
+        th Numéro Police
+        th Date d'assurance
+        th Crée Par
+        th Envoyer Message
+        th Liste de Distribution
+        //th Assuré
+        //th Ver. Initial
+        //th Ver. périodique
+        //th Intermédiaire
+        th
+    tbody
+        tr(ng-repeat='res in results')
+          td {{res.reference}}
+          td {{res.numBordoreau}}
+          td {{res.numPolic}}
+          td {{res.creationDate}}
+          td {{res.createdBy}}
+            //a(ng-href='#savings/{{policyType}}/{{res.def.ref}}')
+              button.btn.btn-link(type='button')
+          //td {{res.insured.firstName  + ' '  + res.insured.name}}
+          //td {{res.deposit.initial | currency : 'DT' : 3}}
+          //td {{res.deposit.periodic | currency : 'DT' : 3}}
+          //td {{res.def.user.pos.code}}
+          td
+            a.btn.btn-success.btn-block(type='button',ng-click='redirectSms()' ) Envoyer sms collectif
+          td
+            include /smsapi/partials/savings-error
+            accordion(close-others='true')
+              accordion-group(heading='Voir détails du bordoreau',type='button',ng-click='testSMS()')
+                include /smsapi/partials/savings-policy-search-view-details
+     

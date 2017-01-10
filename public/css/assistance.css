@@ -1,0 +1,63 @@
+/*begin assistance*/
+
+.col-sm-6.tkf-assistance-index-2 h1,
+.col-sm-6.tkf-assistance-index-1 h1 {
+  color: #000;
+  text-align: left;
+  font-weight: 650;
+  margin-bottom: 8px;
+  margin-top: 25px;
+}
+
+.col-sm-6.tkf-assistance-index-index-1 h1 {
+  font-size: 30px;
+}
+
+.img-assistance-index-1 {
+  width: 400px;
+  height: 450px;
+  margin-top: 25px;
+}
+
+a.btn.tkf-assistance-index-2 {
+  color: #999999;
+  font-size: 15px;
+}
+
+h3.lead.text-muted {
+  text-align: center;
+}
+
+.contribution-message {
+  font-weight: bold;
+  color: red;
+}
+
+.summary-bold {
+  font-weight: bold;
+}
+
+.left-notice {
+  left: 20px;
+}
+
+.left-paper {
+  left: 90px;
+}
+
+.left-paper-subtitle {
+  left: 75px;
+}
+
+.left-notice-subtitle {
+  left: 2px;
+}
+
+.summary-list {
+  list-style-type: none;
+  margin: 0px;
+  padding-left: 20px;
+}
+
+
+/*end assistance*/

@@ -1,0 +1,9 @@
+td(data-values='contract')!= '<%= contract%>'
+td(data-values='reference')
+  a(href!= '#receipt/<%= reference %>/consult', title!= '<%= reference %>')
+    button.btn.btn-link(type='button') <%= reference %>
+td(data-values='subscriberName')!= '<%= subscriberName%>'
+td(data-values='total')!= '<%= _.beautifyAmount(total, true) %>'
+td(data-values='toAffect')!= '<%= _.beautifyAmount(toAffect, true)%>'
+td(data-values='commissionAffected')!= '<%= _.beautifyAmount(commissionAffected, true)%>'
+td(data-values='toPay')!= '<%= _.beautifyAmount(toPay, true)%>'

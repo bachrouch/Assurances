@@ -1,0 +1,7 @@
+mixin savings_policy_view_chart(obj)
+  div(ng-controller='SavingsPolicyChartCtrl', ng-init='init("' + obj + '")')
+    canvas.chart.chart-line(legend=true,
+      colours='computed.colours',
+      series='computed.series',
+      labels='computed.labels',
+      data='computed.data')

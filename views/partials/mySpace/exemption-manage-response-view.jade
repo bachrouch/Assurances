@@ -1,0 +1,9 @@
+.panel.panel-default
+ .panel-heading: h3.panel-title Réponse
+ table.table
+      tr
+        td
+            textarea(data-fields='comments', rows='4', cols='35')
+        td
+            a.btn.btn-block.btn-success(data-actions='accept') Accepter
+            a.btn.btn-block.btn-danger(data-actions='reject') Rejeter

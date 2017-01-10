@@ -1,0 +1,5 @@
+td(data-values='reference')
+ a(href!= '#payback/<%= reference %>/consult', title!= '<%= reference %>')
+    button.btn.btn-link(type='button') <%= reference %>
+td!= '<%= _.beautifyAmount(amount) %>'
+td!= '<%= _.beautifyDate(date) %>'

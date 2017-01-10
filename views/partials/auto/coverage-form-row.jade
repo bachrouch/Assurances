@@ -1,0 +1,8 @@
+tr
+  td(data-fields='subscribed')
+  td!= '<%= name %>'
+  td(data-fields='limit')
+  td(data-fields='deductible')
+  td(data-values='rate')!= '<%= _.beautifyAmount(rate) %>'
+  td(data-values='premium')!= '<%= _.beautifyAmount(premium) %>'
+  td(data-values='tax')!= '<%= _.beautifyAmount(tax) %>'

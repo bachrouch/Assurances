@@ -1,0 +1,26 @@
+doctype html
+html(lang='fr')
+
+  head
+    meta(charset='utf-8')
+    title= title
+    block style
+      include /helpers/vendorCSS-ng
+      link(href='/css/common.css', rel='stylesheet')
+      if test
+        link(href='/css/test.css', rel='stylesheet')
+
+  body(ng-app='app')
+
+    block header
+      include /helpers/header-ng
+
+    block content
+      include /helpers/content-ng
+
+    block footer
+      include /helpers/footer
+
+    block templates
+    block scripts
+      include /helpers/vendorJS-ng

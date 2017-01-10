@@ -1,0 +1,29 @@
+.form-horizontal
+  .form-group
+    label.control-label.col-sm-2 Identifiants
+    .col-sm-10(data-fields='id')
+  .form-group
+    label.control-label.col-sm-2 Raison sociale
+    .col-sm-5(data-fields='companyName')
+    .col-sm-5(data-fields='activityField')
+  .form-group
+    label.control-label.col-sm-2 Coordonnées
+    .col-sm-4(data-fields='phone')
+    .col-sm-3(data-fields='email')
+    .col-sm-3(data-fields='fax')
+  .form-group
+    label.control-label.col-sm-2 Contact
+    .col-sm-4(data-fields='contactName')
+    .col-sm-3(data-fields='contactPhone')
+    .col-sm-3(data-fields='contactEmail')
+  .form-group
+    label.control-label.col-sm-2 Adresse
+    .col-sm-10(data-fields='address')
+  .form-group
+    label.control-label.col-sm-2 Code postal
+    .col-sm-4(data-fields= 'postalCode')
+    .col-sm-3(data-values='delegation') <%= delegation %>
+    .col-sm-2(data-values='governorate') <%= governorate %>
+  .form-group
+    label.control-label.col-sm-2 Localité
+    .col-sm-5(data-fields="locality")

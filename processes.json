@@ -1,0 +1,42 @@
+ [{
+   "name": "portal-recette",
+   "script": "./index.js",
+   "instances": 2,
+   "error_file": "./data/pm2/err.log",
+   "out_file": "./data/pm2/out.log",
+   "pid_file": "./data/pm2/pid",
+   "env": {
+     "PORT": 3000,
+     //"TAKAFUL_MONGO_URI": "mongodb://192.168.1.223/portal-recette",
+     "TAKAFUL_MONGO_URI": "mongodb://localhost/takaful",
+     "TAKAFUL_ORACLE_DBHOST": "192.168.1.224",
+     "TAKAFUL_ORACLE_USR": "GC_COMP_ATK",
+     "TAKAFUL_ORACLE_PWD": "MANAGER",
+     "TAKAFUL_ORACLE_DB": "ESPASS_PPROD",
+     "TAKAFUL_PRINT_SRV": "192.168.1.227",
+     "TAKAFUL_PRINT_PORT": 3000,
+     "TAKAFUL_WEB_QUOTE_IP": ["192.168.1.43", "196.203.16.34", "197.14.10.77",
+       "178.33.226.114"
+     ]
+   }
+ }, {
+   "name": "debit-batch",
+   "script": "./batch/debit.js",
+   "instances": 1,
+   "error_file": "./batch/data/pm2/err.log",
+   "out_file": "./batch/data/pm2/out.log",
+   "pid_file": "./batch/data/pm2/pid",
+   "env": {
+     "TAKAFUL_MONGO_URI": "mongodb://localhost/takaful"
+   }
+ }, {
+   "name": "savings-terms-batch",
+   "script": "./batch/savingsTerms.js",
+   "instances": 1,
+   "error_file": "./batch/data/pm2/err.log",
+   "out_file": "./batch/data/pm2/out.log",
+   "pid_file": "./batch/data/pm2/pid",
+   "env": {
+     "TAKAFUL_MONGO_URI": "mongodb://localhost/takaful"
+   }
+ }]

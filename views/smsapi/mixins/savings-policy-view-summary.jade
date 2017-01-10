@@ -1,0 +1,26 @@
+mixin savings_policy_view_summary(obj)
+  div(ng-controller='SavingsPolicySummaryCtrl', ng-init='init("' + obj + '")')
+    h4 Synthèse de l'offre
+    table.table.table-condensed.table-striped
+      tr
+        td A
+        td Cumul des Contributions
+        td {{computed.premium | currency : 'DT' : 0}}
+      tr
+        td B
+        td Gain d'impôt cumulé
+        td {{computed.taxEco | currency : 'DT' : 0}}
+      tr
+        td C=A-B
+        td Investissement réel
+        td {{computed.premium - computed.taxEco | currency : 'DT' : 0}}
+      tr
+        td D
+        td Epargne Prévisonnelle
+        td {{computed.cumul | currency : 'DT' : 0}}
+      tr
+        td E = D-C
+        td Gain net
+        td
+          strong
+            |  {{computed.cumul - computed.premium + computed.taxEco | currency : 'DT' : 0}}

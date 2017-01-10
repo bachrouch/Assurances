@@ -1,0 +1,29 @@
+## urgent
+
+* check dates on quote (no more events on model since they are shared between
+  consult and modify views)
+* add a security level on services (no update on contract)
+
+## views
+
+* check .tkf-XXX usage
+
+  * .tkf-stepx-yyy for processes
+
+* check when and why using setTimeout (declaring events)
+* generalize initEvents and initListeners on forms
+* avoid cb in data select forms (probably requests)
+
+## pages
+
+* manage templates by code (no need to list via xxx-templates
+
+## refactoring
+
+* avoid using contract word (use policy)
+* avoid using quote concept (policy is the object, quote is a state,
+  contract is a state)
+* all messages should be in a dedicated file (msg.js per module)
+* grep setTimeout and explain all cases
+* mod.controller should be forbidden (it is a super layer, not visible
+  from models/views)

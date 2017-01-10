@@ -1,0 +1,54 @@
+include /family/mixins/savings-policy-view-ben
+include /family/mixins/savings-policy-view-summary
+include /family/mixins/savings-policy-view-chart
+include /family/mixins/savings-policy-view-sits
+#savings-contract
+  .page-header: h3 Contrat d'assurance vie {{policy.def.ref}} - {{policy.def.ver}} - {{policy.def.status | policyStatus}} - {{policy.def.user.fullName}}
+  .col-sm-10.process-form
+    include /family/partials/savings-error
+    .col-sm-6
+      .list-group
+        a.list-group-item
+          h4.list-group-item-heading Souscripteur
+          .list-group-item-text
+            include /family/partials/savings-policy-view-subscriber
+        a.list-group-item
+          h4.list-group-item-heading Assuré
+          .list-group-item-text
+            include /family/partials/savings-policy-view-insured
+        a.list-group-item
+          h4.list-group-item-heading Bénéficiaires en cas de vie
+          .list-group-item-text
+            +savings_policy_view_ben('life')
+        a.list-group-item
+          h4.list-group-item-heading Bénéficiaires en cas de décès
+          .list-group-item-text
+            +savings_policy_view_ben('death')
+    .col-sm-6
+      .list-group
+        a.list-group-item
+          h4.list-group-item-heading Contrat
+          .list-group-item-text
+            include /family/partials/savings-policy-view-def
+        a.list-group-item
+          h4.list-group-item-heading Versement initial
+          .list-group-item-text
+            include /family/partials/savings-policy-view-ini-dep
+        a.list-group-item
+          h4.list-group-item-heading Versements périodiques
+          .list-group-item-text
+            include /family/partials/savings-policy-view-per-dep
+        a.list-group-item
+          h4.list-group-item-heading Prévoyance
+          .list-group-item-text
+            include /family/partials/savings-policy-view-terms
+    h3 Prévision de l'évolution de l'épargne
+    .panel.panel-default
+      .panel-body
+        .col-sm-6
+          +savings_policy_view_summary('contract')
+        .col-sm-6
+          +savings_policy_view_chart('contract')
+    +savings_policy_view_sits('contract')
+  .col-sm-2.process-act
+    include /family/partials/savings-act-contract

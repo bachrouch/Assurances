@@ -1,0 +1,13 @@
+.row
+  .col-sm-3.form-group
+    label.control-label CIN
+    .form-control-static(data-values='id')!= '<%= id %>'
+  .col-sm-3.form-group
+    label.control-label Nom
+    .form-control-static(data-values='fullName')!= '<%= fullName() %>'
+  .col-sm-3.form-group
+    label.control-label Téléphone
+    .form-control-static(data-values='phone1')!= '<%= phone1 %>'
+  .col-sm-3.form-group
+    label.control-label Email
+    .form-control-static(data-values='email1')!= '<%= email1 %>'

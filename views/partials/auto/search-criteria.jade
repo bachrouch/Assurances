@@ -1,0 +1,31 @@
+div
+  .row
+    .col-sm-2.form-group
+      label.control-label N°
+      div(data-fields='reference')
+    .col-sm-2.form-group
+      label.control-label Mat
+      div(data-fields='vehicle')
+    .col-sm-2.form-group
+      label.control-label CIN/RC
+      div(data-fields='clientid')
+    .col-sm-6.form-group
+      label.control-label Souscripteur
+      div(data-fields='clientname')
+  .row
+    .col-sm-2.form-group
+      label.control-label Effet du
+      div(data-fields='effcDateFrom')
+    .col-sm-2.form-group
+      label.control-label Effet au
+      div(data-fields='effcDateTo')
+    .col-sm-3.form-group.tkf-nature
+      label.control-label Nature
+      div(data-fields='nature')
+    .col-sm-3.form-group
+      label.control-label Etat
+      div(data-fields='status')
+    .col-sm-2.form-group
+      label.control-label
+      a.btn.btn-block.btn-warning.glyphicon.glyphicon-search(data-actions='search')      Rechercher
+    

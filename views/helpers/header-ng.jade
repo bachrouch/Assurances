@@ -1,0 +1,45 @@
+mixin renderItems (nav)
+  a.dropdown-toggle(dropdown-toggle, href=nav.path)= nav.label + ' '
+    b.caret
+  ul.dropdown-menu
+    - each item in nav.items
+      li: a(href=item.path)= item.label
+
+.navbar.navbar-inverse.navbar-fixed-top
+  .container
+    .navbar-header
+      a(href='/')
+        img(src='../img/alikSys.png')
+      button.navbar-toggle(type='button', data-toggle='collapse', data-target='.tkf-main-nav')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+    .collapse.navbar-collapse.tkf-main-nav(role='navigation')
+      ul.nav.navbar-nav
+        - each nav in navs
+          - if (nav.items) {
+            - if (nav.active) {
+              li.dropdown.active(dropdown='', is-open='status.isopen', ng-controller='MenuCtrl')
+                +renderItems(nav)
+            - } else {
+              li.dropdown(dropdown='', is-open='status.isopen', ng-controller='MenuCtrl')
+                +renderItems(nav)
+            - }
+          - } else {
+            - if (nav.active) {
+              li.active: a(href=nav.path)= nav.label
+            - } else {
+              li: a(href=nav.path)= nav.label
+            - }
+          - }
+      .navbar-right(ng-controller='SessionCtrl')
+        form.navbar-form.tkf-connection-form(ng-submit='login()', ng-hide='session.connected')
+          .form-group
+            input.form-control(type='text', ng-model='username', placeholder='Utilisateur')
+          .form-group
+            input.form-control(type='password', ng-model='password', placeholder='Mot de passe')
+          button.btn.btn-success(type='submit'): span.glyphicon.glyphicon-log-in
+        ul.nav.navbar-nav(ng-show='session.connected')
+          li.navbar-text {{computed.user}}
+          li: button.btn.btn-danger.navbar-btn(type='button', ng-click='logout()'): span.glyphicon.glyphicon-log-out

@@ -1,0 +1,18 @@
+table.table.summary
+  tr
+    th.receipt Statut
+    td.receipt!= '<%= updateStatus() %>'
+  tr
+    th.receipt Évaluateur
+    td.receipt!= '<%= closingUser %>'
+  tr
+    th.receipt Évaluation
+    td.receipt!= '<%= _.beautifyDate(closingDate) %>'
+  tr
+    th.receipt Commentaires
+    td.receipt!= '<%= getComments() %>'
+  tr
+    th.receipt Liste des actions
+    td
+      a(type = 'button' ,data-actions='receiptsReported')
+        span.glyphicon.glyphicon-th-list.btn-success.btn-sm

@@ -1,0 +1,13 @@
+table.table.summary
+  tr
+    th.receipt Commission à payer
+    td.receipt!= '<%= _.beautifyAmount(commissionToPay()) %>'
+  tr
+    th.receipt Retenue à la source
+    td.receipt!= '<%= _.beautifyAmount(ras()) %>'
+  tr
+    th.receipt Commission Nette
+    td.receipt!= '<%= _.beautifyAmount(toPay()) %>'
+  tr
+    th.receipt Solde FC
+    td.receipt!= '<%= _.beautifyAmount(balance) %>'

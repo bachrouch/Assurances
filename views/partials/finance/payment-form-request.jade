@@ -1,0 +1,18 @@
+.panel.panel-default
+ .panel-heading: h3.panel-title Dérogation
+ .panel-body
+  div
+    .row
+      .col-sm-1
+      .col-sm-8
+        textarea(data-fields='msg', rows='4', cols='85')
+      .col-sm-2
+        br
+        a.btn.btn-block.btn-success(data-actions='sendExemption') Envoyer
+    br
+    .row
+      .col-sm-1
+      .col-sm-5(data-fields='receiptsLst')
+      .col-sm-3(data-fields='reviewDate')
+      .col-sm-3
+        a.btn.btn-success.glyphicon.glyphicon-plus.btn-sm(data-actions='addReceipt')

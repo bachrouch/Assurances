@@ -1,0 +1,6 @@
+tr
+  td.col-sm-4(data-values='usageDesc')!= '<%= usageDesc %>'
+  td.col-sm-4(data-values='coverDesc')!= '<%= coverDesc %>'
+  td.col-sm-3(data-values='discount')!= '<%= _.beautifyPercent(discount) %>'
+  td.col-sm-1
+    a.glyphicon.glyphicon-trash.btn-danger.btn-sm(data-actions='cancelDiscount')

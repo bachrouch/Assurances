@@ -1,0 +1,31 @@
+div
+  .row
+    .col-sm-3.form-group
+      label.control-label Référence
+      div(data-fields='reference')
+    .col-sm-3.form-group
+      label.control-label Pays
+      div(data-fields='country')
+    .col-sm-3.form-group
+      label.control-label CIN
+      div(data-fields='clientid')
+    .col-sm-3.form-group
+      label.control-label Client
+      div(data-fields='clientname')
+  .row
+    .col-sm-3.form-group
+      label.control-label Date d'effet
+      div(data-fields='effcDateFrom')
+    .col-sm-3.form-group
+      label.control-label Date d'effet
+      div(data-fields='effcDateTo')
+    .col-sm-3.form-group
+      label.control-label Date de souscription
+      div(data-fields='subsDateFrom')
+    .col-sm-3.form-group
+      label.control-label Date de souscription
+      div(data-fields='subsDateTo')
+  .row
+    .col-sm-9
+    .col-sm-3
+      a.btn.btn-block.btn-warning(data-actions='search') Rechercher

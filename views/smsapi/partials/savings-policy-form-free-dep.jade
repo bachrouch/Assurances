@@ -1,0 +1,16 @@
+form(role='form', novalidate)
+  .row
+    .col-sm-4.form-group
+      label.control-label Montant
+      input.form-control(type='number',
+          min=0, 
+          ng-model='cur.amount')
+    .col-sm-4.form-group
+      label.control-label Date d'effet
+      input.form-control(type='date',
+          ng-disabled='true',
+          ng-model='cur.effDate')
+    .col-sm-4.form-group
+      label.control-label Commission
+      input.form-control(type='number',
+           ng-model='cur.com')

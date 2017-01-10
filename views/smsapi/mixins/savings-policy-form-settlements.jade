@@ -1,0 +1,42 @@
+mixin savings_policy_form_settlements(obj)
+  form(role='form',
+    ng-controller='SavingsPolicySettlementsCtrl',
+    ng-init='init("' + obj + '")',
+    ng-submit='addSettlement()',
+    novalidate)
+    .col-sm-4
+      .form-horizontal
+        .form-group
+          label.col-sm-4.control-label Contribution
+          .col-sm-8: p.form-control-static
+            | {{pure | currency : 'DT' : 3}}
+        .form-group
+          label.col-sm-4.control-label Frais
+          .col-sm-8: p.form-control-static
+            | {{fees | currency : 'DT' : 3}}
+        .form-group
+          label.col-sm-4.control-label TTC due
+          .col-sm-8: p.form-control-static
+            | {{toPay | currency : 'DT' : 3}}
+    .col-sm-8
+      table.table
+        tr
+          th.col-sm-3 Mode
+          th.col-sm-4 Montant
+          th.col-sm-4 Référence
+          th.col-sm-1 Action
+        tr(ng-repeat='s in settlements')
+          td {{s.mode | financePaymentMethod}}
+          td {{s.amount | currency : 'DT' : 3}}
+          td {{s.name}}
+          td.center-block
+            button.btn.btn-danger.btn-xs(ng-click='delSettlement($index)'): i.glyphicon.glyphicon-remove
+        tr
+          td: select.form-control(ng-model='cur.mode',
+            ng-options='v.code as v.label for v in enums.finance.paymentMethods')
+          td: input.form-control(type='number',
+            ng-model='cur.amount')
+          td: input.form-control(type='text',
+            ng-model='cur.name')
+          td.center-block
+            button.btn.btn-success.btn-xs(type='submit'): i.glyphicon.glyphicon-plus

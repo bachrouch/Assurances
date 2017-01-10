@@ -1,0 +1,14 @@
+.row
+  .col-sm-6.form-group
+    label.control-label Liste des pays
+    .form-control-static(data-values='country')!= '<%= countriesDisplay() %>'
+  .col-sm-2.form-group
+    label.control-label Zone
+    .form-control-static(data-values='zone')!= 'Zone <%= zone %>'
+  .col-sm-2.form-group
+    label.control-label Type
+    .form-control-static(data-values='type')!= '<%= typeName() %>'
+  .col-sm-2.form-group
+    label.control-label Nb. personnes
+    .form-control-static(data-values='personsNumber')!= '<%= personsNumber %>'    
+  

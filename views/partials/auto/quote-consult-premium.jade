@@ -1,0 +1,20 @@
+table.table
+  thead
+    tr
+      th Contribution
+      th Frais
+      th Taxes
+      th Timbres
+      th Total
+  tbody
+    tr
+      td!= '<%= _.beautifyAmount(premium) %>'
+      td!= '<%= _.beautifyAmount(fees) %>'
+      td!= '<%= _.beautifyAmount(taxes) %>'
+      td
+        != 'FGA: <%= _.beautifyAmount(stampFGA) %>'
+        br
+        != 'FSSR: <%= _.beautifyAmount(stampFSSR) %>'
+        br
+        != 'FPAC: <%= _.beautifyAmount(stampFPAC) %>'
+      td: strong!= '<%= _.beautifyAmount(totalPremium()) %> TTC'

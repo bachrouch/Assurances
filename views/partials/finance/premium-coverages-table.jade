@@ -1,0 +1,16 @@
+table.table
+  thead
+    tr
+      th.col-sm-7 Garantie
+      th.col-sm-2 Cont. Nette
+      th.col-sm-1 TUA
+      th.col-sm-1 FG
+      th.col-sm-1 Commission
+  tbody
+  tfoot
+    tr
+      th Totaux
+      th!= '<%= _.beautifyAmount(getTotals(\'amount\'), true) %>'
+      th!= '<%= _.beautifyAmount(getTotals(\'tua\'), true) %>'
+      th!= '<%= _.beautifyAmount(getTotals(\'fg\'), true) %>'
+      th!= '<%= _.beautifyAmount(getTotals(\'commission\'), true) %>'

@@ -1,0 +1,25 @@
+.row.page-header
+  .col-sm-12.tkf-header: h3 Gestion des dérogations - Feuille de caisse N° <%= paymentReference() %>
+.panel.panel-default
+  .panel-heading: h3.panel-title Détails de la dérogation
+  .panel-body.tkf-exemption-manage-details
+.tkf-exemption-response
+.panel.panel-default
+  .panel-heading: h3.panel-title Détails
+  .panel-body
+    .row
+      .col-sm-4
+        .panel.panel-default
+          .panel-heading: h3.panel-title Synthèse
+          .tkf-summary-payment
+      .col-sm-4
+        .panel.panel-default
+          .panel-heading: h3.panel-title Montants
+          .tkf-payment-amounts  
+      .col-sm-4
+        .panel.panel-default
+          .panel-heading: h3.panel-title Soldes
+          .tkf-payment-reserved
+    .panel.panel-default
+      .panel-heading: h3.panel-title Quittances
+      .panel-body.tkf-listReceipts

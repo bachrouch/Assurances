@@ -1,0 +1,46 @@
+div
+  .form-horizontal
+    .form-group
+      .col-sm-1
+        label.control-label Quittance
+      .col-sm-2
+        div(data-fields='receiptReference')
+      .col-sm-1
+        label.control-label Contrat
+      .col-sm-2
+        div(data-fields='policyReference')
+      .col-sm-1
+        label.control-label Client
+      .col-sm-2
+        div(data-fields='subscriberName')
+      .col-sm-1
+        label.control-label Pièce
+      .col-sm-2
+        div(data-fields='insuranceCertificate')
+    .form-group
+      .col-sm-1
+        label.control-label Du
+      .col-sm-2
+        div(data-fields='fromDate')
+      .col-sm-1
+        label.control-label Au
+      .col-sm-2
+        div(data-fields='toDate')
+      .col-sm-1
+        label.control-label Du
+      .col-sm-2
+        div(data-fields='effectiveDate')
+      .col-sm-1
+        label.control-label Au
+      .col-sm-2
+        div(data-fields='endDate')
+    .form-group
+      .col-sm-1
+        label Impayé!=0
+      .col-sm-2
+        div(data-fields='nonZeroDue')
+      .col-sm-5
+      .col-sm-2
+        a.btn.btn-block.btn-warning(data-actions='search') Rechercher
+      .col-sm-2
+        a.btn.btn-block.btn-default.disabled(data-actions='exportResult') Exporter

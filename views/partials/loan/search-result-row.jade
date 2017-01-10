@@ -1,0 +1,8 @@
+tr
+  td(data-values='numero')!= '<%= numero %>'
+  td(data-values='effectiveDate')!= '<%= _.beautifyDate(effectiveDate) %>'
+  td(data-values='beneficiary')!= '<%= beneficiary %>'
+  td(data-values='loanAmount')!= '<%= _.beautifyAmount(loanAmount) %>'
+  td(data-values='clientName')!= '<%= clientName %>'
+  td(data-values='premium')!= '<%= _.beautifyAmount(premium) %>'
+  td(data-actions="consult")

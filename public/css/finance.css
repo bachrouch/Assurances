@@ -1,0 +1,151 @@
+/*begin finance*/
+
+.tkf-receipts-table .form-control {
+  width: 100px;
+}
+
+table.table-striped td.td-Name {
+  width: 100px;
+}
+
+table.table-striped td.td-Bold {
+  font-weight: bold;
+}
+
+table.table-striped td.td-Reference {
+  width: 140px;
+}
+
+table.table-striped td.td-Contract {
+  width: 140px;
+}
+
+table.table-striped td.td-Total {
+  width: 145px;
+}
+
+table.table-striped td.td-TotalCommission {
+  width: 170px;
+}
+
+table.table-striped td.td-ToAffect {
+  width: 140px;
+}
+
+table.table-striped td.td-CommissionAffected {
+  width: 140px;
+}
+
+table.table-striped td.td-ToPay {
+  width: 140px;
+}
+
+table.table-striped td.td-TotalBold {
+  width: 170px;
+  font-weight: bold;
+}
+
+table.table th.reference {
+  border-top: 1px solid transparent;
+}
+
+.table> tbody> tr> td.reference {
+  border-top: 1px solid transparent;
+}
+
+table.table.summary {
+  margin-bottom: -2px;
+  text-align: right;
+}
+
+table.table.subscriber {
+  margin-bottom: -30px;
+}
+
+div.panel-body.tkf-listReceipts {
+  border-bottom: 2px solid #ddd;
+}
+
+a#action.btn-block {
+  margin-bottom: 10px;
+}
+
+table.table th.subscriber {
+  border-top: 1px solid transparent;
+  width: 20%;
+}
+
+table.table td.subscriber {
+  border-top: 1px solid transparent;
+  text-align: left;
+}
+
+div.col-sm-6.summary-2 {
+  padding-left: 0px;
+}
+
+div.col-sm-6.summary-1 {
+  padding-right: 0px;
+}
+
+td.summary {
+  border-right: 1px solid #ddd;
+}
+
+td.receipt {
+  width: 25%;
+  text-align: right;
+}
+
+th.receipt {
+  width: 20%;
+}
+
+td.quarter {
+  width: 20%;
+}
+
+table.table th.premium {
+  width: 25%;
+}
+
+table.table td.premium {
+  width: 25%;
+  text-align: right;
+}
+
+table.table th.premium-header {
+  border-top: 1px solid transparent;
+  width: 25%;
+}
+
+table.table td.premium-header {
+  border-top: 1px solid transparent;
+  text-align: left;
+}
+
+.tkf-message-text {
+  padding: 6px 12px;
+  text-align: center;
+  vertical-align: middle;
+  display: block;
+  border-radius: 4px;
+  margin-bottom: 0;
+}
+
+.table> thead> tr> td.primary,
+.table> tbody> tr> td.primary,
+.table> thead> tr.primary> td,
+.table> tbody> tr.primary> td {
+  background-color: #DFF2FC
+}
+
+.table> thead> tr> td.valid,
+.table> tbody> tr> td.valid,
+.table> thead> tr.valid> td,
+.table> tbody> tr.valid> td {
+  background-color: #D3EAC9
+}
+
+
+/*end finance*/

@@ -1,0 +1,10 @@
+.row
+  .col-sm-4.form-group
+    label.control-label Date d'effet
+    div(data-fields='beginDate')
+  .col-sm-4.form-group
+    label.control-label Date d'expiration
+    div(data-fields='endDate')
+  .col-sm-4.form-group
+    label.control-label Durée du contrat
+    .form-control-static(data-values='duration')!= '<%= _.beautifyDuration(beginDate, endDate) %>'

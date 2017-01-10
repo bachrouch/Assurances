@@ -1,0 +1,31 @@
+.form-horizontal
+  .form-group
+    .col-sm-2
+      label.control-label Quittance
+    .col-sm-2(data-fields='reference')
+    .col-sm-1
+      label.control-label Anomalie
+    .col-sm-1(data-fields='onlyIrregular')
+    .col-sm-1
+      label.control-label Inter.
+    .col-sm-3(data-fields='pos')
+    .col-sm-2
+      a.btn.btn-block.glyphicon.glyphicon-list-alt.btn-success(data-actions='posHistory')  Historique
+  .form-group
+    .col-sm-2
+      label.control-label Période d'émission
+    .col-sm-2(data-fields='raisedFrom')
+    .col-sm-2(data-fields='raisedTo')
+    .col-sm-2
+      label.control-label Période d'effet
+    .col-sm-2(data-fields='effectiveFrom')
+    .col-sm-2(data-fields='effectiveTo')
+  .form-group
+    .col-sm-2
+      label.control-label Status et nature
+    .col-sm-2(data-fields='status')
+    .col-sm-4(data-fields='nature')
+    .col-sm-2
+      a.btn.btn-block.glyphicon.glyphicon-search.btn-warning(data-actions='searchRecComm')  Rechercher
+    .col-sm-2
+      a.btn.btn-block.glyphicon.glyphicon-export.btn-success(data-actions='exportRecComm')  Exporter

@@ -1,0 +1,16 @@
+.row
+  .col-sm-2.form-group
+    label.control-label Intermédiaire
+    .form-control-static(data-values='pos')!= '<%= pos %>'
+  .col-sm-2.form-group
+    label.control-label Statut
+    .form-control-static(data-values='status')!= '<%= updateStatus() %>'
+  .col-sm-2.form-group
+    label.control-label Création
+    .form-control-static(data-values='creationDate')!= '<%= _.beautifyDate(creationDate)%>'
+  .col-sm-2.form-group
+    label.control-label Évaluation
+    .form-control-static(data-values='closingDate')!= '<%= _.beautifyDate( closingDate) %>'
+  .col-sm-4.form-group
+    label.control-label Détails de la demande
+    .form-control-static(data-values='context')!= '<%= context %>'

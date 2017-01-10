@@ -1,0 +1,13 @@
+td(data-values='reference')
+ a(href!= '#payment/<%= reference %>/consult', title!= '<%= reference %>')
+    button.btn.btn-link(type='button') <%= reference %>
+td(data-values='pos')!= '<%= getPos() %>'
+td(data-values='status')!= '<%=  updateStatus() %>'
+td(data-values='nbReceipts')!= '<%= nbReceipts %>'
+td(data-values='balance')!= '<%= _.beautifyAmount(balance, true)%>'
+td(data-values='paid')!= '<%= _.beautifyAmount(paid(), true)%>'
+td(data-values='creationDate')!= '<%= _.beautifyDate(creationDate) %>'
+td(data-values='closingDate')!= '<%= _.beautifyDate(closingDate) %>'
+td
+  a(href!= '#payment/<%= reference %>/validate', title!= Contrôler)
+    button.btn.btn-block.btn-success(type='button') Contrôler

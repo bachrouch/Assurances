@@ -1,0 +1,25 @@
+div
+  .row
+    .col-sm-3
+      label.control-label Mode
+      div(data-fields='mode')
+     .col-sm-3
+      label.control-label Feuille de caisse
+      div(data-fields='payments')
+    .col-sm-3
+      label.control-label Montant
+      div(data-fields='amount')
+  .row
+   .col-sm-3
+      label.control-label N°
+      div(data-fields='reference')
+    .col-sm-3
+      label.control-label Banque
+      div(data-fields='bank')
+    .col-sm-3
+      label.control-label Date chèque
+      div(data-fields='date')
+    .col-sm-3
+      div
+        a(type = 'button' ,data-actions='addSettlement')
+          span.glyphicon.glyphicon-plus.btn-success.btn-sm

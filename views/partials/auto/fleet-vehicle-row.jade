@@ -1,0 +1,14 @@
+td(data-values='number')!= '<%= number %>'
+td(data-values='registrationNumber')!= '<%= registrationNumber %>'
+td(data-values='usageDesc')!= '<%= usageDesc %>'
+td(data-values='vehicleMake')!= '<%= vehicleMake %>'
+td(data-values='updatedValue')!= '<%= _.beautifyAmount(updatedValue) %>'
+td
+  a(type = 'button' ,data-actions='editVehicle')
+    span.glyphicon.glyphicon-edit.btn-primary.btn-sm
+td
+  a(type = 'button' ,data-actions='coverVehicle')
+    span.glyphicon.glyphicon-th-list.btn-success.btn-sm
+td
+  a(type = 'button' ,data-actions='removeVehicle')
+    span.glyphicon.glyphicon-trash.btn-danger.btn-sm

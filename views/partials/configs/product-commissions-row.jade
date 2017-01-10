@@ -1,0 +1,9 @@
+tr
+  td.col-sm-1(data-values='profile')!= '<%= profile %>'
+  td.col-sm-8(data-values='profileName')!= '<%= profileName %>'
+  td.col-sm-1(data-fields='rateFormatted')
+  td.col-sm-1
+    a.btn.btn-block.glyphicon.glyphicon-floppy-disk.btn-success(data-actions='saveNewCommission' title='Appliquer le nouveau taux')
+  td.col-sm-1
+    a.btn.btn-block.btn-warning(title='Annuler' data-actions='revertOldCommission')
+      i.fa.fa-undo(aria-hidden='true')

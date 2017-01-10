@@ -1,0 +1,10 @@
+td.col-sm-1(data-values='code')!= '<%= code %>'
+td.col-sm-4(data-values='name')!= '<%= name %>'
+td.col-sm-3(data-values='branchName')!= '<%= branchName() %>'
+td.col-sm-2(data-values='effectiveDate')!= '<%= _.beautifyDate(fromDate) %>'
+td.col-sm-2(data-values='endDate')!= '<%= _.beautifyDate(toDate) %>'
+td.col-sm-2(data-values='statusDesc')!= '<%= statusDesc() %>'
+td.col-sm-1
+  //- a.btn.btn-block.glyphicon.glyphicon-cog.btn-primary(data-actions='configureProduct' title='Modifier le produit')
+td.col-sm-1
+  a.btn.btn-block.glyphicon.glyphicon-th-list.btn-success(data-actions='displayProdDetails' title='Détails du produit')

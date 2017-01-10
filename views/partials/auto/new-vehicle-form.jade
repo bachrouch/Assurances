@@ -1,0 +1,54 @@
+div
+  .row
+    .col-sm-5.form-group
+      label.control-label Usage
+      div(data-fields='usage')
+    .col-sm-3.form-group
+      label.control-label N° Chassis
+      div(data-fields='vin')
+    .col-sm-2.form-group
+      label.control-label Immat.
+      div(data-fields='registrationNumber')
+    .col-sm-2.form-group
+      label.control-label Date PMC
+      div(data-fields='issueDate')
+  .row
+    .col-sm-3.form-group
+      label.control-label Puissance
+      div(data-fields='power')
+    .col-sm-3.form-group
+      label.control-label Nb. Places
+      div(data-fields='placesNumber')
+    .col-sm-3.form-group
+      label.control-label PTC
+      div(data-fields='totalWeight')
+    .col-sm-3.form-group
+      label.control-label CU
+      div(data-fields='payload')
+  .row
+    .col-sm-3.form-group
+      label.control-label Val. à neuf
+      div(data-fields='newValue')
+    .col-sm-3.form-group
+      label.control-label Val. Vénale
+      div(data-fields='updatedValue')
+    .col-sm-3.form-group
+      label.control-label Marque
+      div(data-fields='make')
+    .col-sm-3.form-group
+      label.control-label Modèle
+      div(data-fields='model')
+  .row
+    .col-sm-6.form-group
+      label.control-label Clause P/C
+      div(data-fields='beneficiaryClause')
+    .col-sm-6.form-group
+      label.control-label Société
+      div(data-fields='companyName')
+  .row
+    .col-sm-6
+      p.btn-block.bg-danger.tkf-validation-msg
+    .col-sm-3
+      a.btn.btn-block.btn-success(data-actions='addNewVehicle') Nouveau véhicule
+    .col-sm-3
+      a.btn.btn-block.btn-primary(data-actions='saveVehicle') Enregistrer

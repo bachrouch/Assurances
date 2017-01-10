@@ -1,0 +1,47 @@
+mixin savings_policy_form_payment(obj)
+  form(role='form',
+    name='test',
+    ng-controller='SavingsPolicyPaymentCtrl',
+    ng-submit='validateAccount()',
+    ng-init='init("' + obj + '")',
+    novalidate)
+    .col-sm-3.form-group
+      label.control-label
+      .checkbox
+        label
+          input(type='checkbox',
+            ng-model='isDebit')
+          | Prélèvement
+    .col-sm-2
+      label.control-label Code Banque(2)
+      input.form-control(type='string',
+        ng-model='bankCode',
+        ng-minlength=2,
+        ng-maxlength=2,
+        ng-disabled='!isDebit')
+    .col-sm-2
+      label.control-label Code Agence(3)
+      input.form-control(type='string',
+        ng-model='branchCode',
+        ng-minlength=3,
+        ng-maxlength=3,
+        ng-disabled='!isDebit')
+    .col-sm-3.form-group
+      label.control-label N° de compte(13)
+      input.form-control(type='string',
+        ng-model='accountNumber',
+        ng-minlength=13,
+        ng-maxlength=13,
+        ng-disabled='!isDebit')
+    .col-sm-1
+      label.control-label Clé
+      input.form-control(type='string',
+        ng-model='key',
+        ng-minlength=2,
+        ng-maxlength=2,
+        ng-disabled='!isDebit')
+    .col-sm-1.form-group
+      label.control-label
+      div
+        button.btn.btn-success.btn-xs(type='submit', ng-disabled='!isDebit')
+          | Valider

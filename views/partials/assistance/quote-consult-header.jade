@@ -1,0 +1,10 @@
+.row
+  .col-sm-4.form-group
+    label.control-label Nature du contrat
+    .form-control-static(data-values='kind')!= '<%= kind %>'
+  .col-sm-4.form-group
+    label.control-label Date d'effet
+    .form-control-static(data-values='effectiveDate')!= '<%= _.beautifyDate(effectiveDate) %>'
+  .col-sm-4.form-group
+    label.control-label Date de fin
+    .form-control-static(data-values='endDate')!= '<%= _.beautifyDate(endDate) %>'

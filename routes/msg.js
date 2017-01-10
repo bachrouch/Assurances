@@ -1,0 +1,1 @@
+exports.declare = function (app) {};

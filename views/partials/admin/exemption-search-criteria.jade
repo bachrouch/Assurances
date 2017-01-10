@@ -1,0 +1,44 @@
+div
+  .row
+    .col-sm-1
+      label.control-label Référence
+    .col-sm-3
+      div(data-fields='reference')
+    .col-sm-1
+      label.control-label Statut
+    .col-sm-3
+      div(data-fields='status')
+    .col-sm-1
+      label.control-label Interm.
+    .col-sm-3
+      div(data-fields='pos')
+  .row
+    .col-sm-1
+      label.control-label Création
+    .col-sm-3
+      div(data-fields='fromCreationDate')
+    .col-sm-1
+      label.control-label Création
+    .col-sm-3
+      div(data-fields='toCreationDate')
+    .col-sm-1
+      label.control-label Type
+    .col-sm-3
+      div(data-fields='type')
+  .row
+    .col-sm-1
+      label.control-label Évaluation
+    .col-sm-3
+      div(data-fields='fromClosingDate')
+    .col-sm-1
+      label.control-label Évaluation
+    .col-sm-3
+      div(data-fields='toClosingDate')
+    .col-sm-1
+      label.control-label Numéro
+    .col-sm-3
+      div(data-fields='num')
+  .row
+    .col-sm-9
+    .col-sm-3
+        a.btn.btn-block.btn-warning(data-actions='search') Rechercher

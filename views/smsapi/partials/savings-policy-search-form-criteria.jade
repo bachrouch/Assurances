@@ -1,0 +1,30 @@
+form(role='form', novalidate)
+  .row
+    .col-sm-3.form-group
+      label.control-label Référence
+      input.form-control(type='string',
+        ng-model='criteria.reference')
+    .col-sm-3.form-group
+      label.control-label N°Police
+      input.form-control(type='string',
+        ng-model='criteria.numPolic')
+    .col-sm-3.form-group
+      label.control-label N° Bordoreau
+      input.form-control(type='string',
+        ng-model='criteria.numBordoreau')
+  .row
+    .col-sm-3.form-group
+      label.control-label  Statut
+      select.form-control(ng-model='criteria.status',
+        ng-options='v.code as v.label for v in enums.policy.status',
+        ng-disabled='criteria.isQuote')
+    .col-sm-3.form-group
+      label.control-label Date d'assurance
+      input.form-control(type='date',
+        ng-model='criteria.creationDate')
+  .row
+    .col-sm-9
+    .col-sm-3
+      button.btn.btn-warning.btn-block(type='submit', ng-click='search()')
+        span.glyphicon.glyphicon-search
+        | Rechercher

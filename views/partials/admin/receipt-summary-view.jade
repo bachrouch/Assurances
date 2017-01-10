@@ -1,0 +1,36 @@
+table.table
+  thead
+    tr
+      th PDV
+      th Profil de la quittance
+      th
+  tbody
+    tr
+      td!= '<%= posName() %>'
+      td!= '<%= posProfile %>'
+      td
+        a.btn.btn-block.glyphicon.glyphicon-list-alt.btn-success(data-actions='posHistory')  Historique
+table.table
+  thead
+    tr
+      th N° Quittance
+      th N° Contrat
+      th Date d'émission
+      th Date d'effet
+      th Date de fin
+  tbody
+    tr
+      td!= '<%= reference %>'
+      td!= '<%= contract %>'
+      td!= '<%= _.beautifyDate(raisedDate) %>'
+      td!= '<%= _.beautifyDate(effectiveDate) %>'
+      td!= '<%= _.beautifyDate(toDate) %>'
+table.table
+  thead
+    tr
+      th Nature de l'anomalie
+      th Status
+  tbody
+    tr
+      td!= '<%= nature %>'
+      td!= '<%= status %>'

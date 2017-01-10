@@ -1,0 +1,15 @@
+a.btn.btn-success.btn-block(type='button', href='{{computed.binderDoc}}', ng-disabled='policy.def.ver>0 || !isActive')
+  span.glyphicon.glyphicon-print
+  | {{docType}}
+button.btn.btn-warning.btn-block(type='button', ng-click='toFreeDeposit()', ng-show='isActive')
+  span.glyphicon.glyphicon-edit
+  | Versement libre
+button.btn.btn-danger.btn-block(type='button', ng-click='validate()', ng-show='toValidate && isActive')
+  span.glyphicon.glyphicon-exclamation-sign
+  | Valider
+button.btn.btn-danger.btn-block(type='button', ng-click='domiciliate()', ng-show='domiciliationStatus.toShow && isActive', ng-disabled='!domiciliationStatus.toShow')
+  span.glyphicon.glyphicon-exclamation-sign
+  | Domicilier
+button.btn.btn-info.btn-block(type='button', ng-show='domiciliationStatus.active',ng-disabled='!domiciliationStatus.toShow')
+  span.glyphicon.glyphicon-ok-sign
+  | Domicilié

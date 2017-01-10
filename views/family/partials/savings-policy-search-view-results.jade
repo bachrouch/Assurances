@@ -1,0 +1,28 @@
+div
+  table.table.table-striped
+    thead
+      tr
+
+        th Référence
+        th Date d'effet
+        th Souscripteur
+        th Assuré
+        th Ver. Initial
+        th Ver. périodique
+        th Intermédiaire
+        th
+    tbody
+        tr(ng-repeat='res in results')
+          td
+            a(ng-href='#savings/{{policyType}}/{{res.def.ref}}')
+              button.btn.btn-link(type='button')
+                | {{res.def.ref }}
+          td {{res.def.effDate | date : 'shortDate'}}
+          td {{res.subscriber.firstName + ' '  + res.subscriber.name}}
+          td {{res.insured.firstName  + ' '  + res.insured.name}}
+          td {{res.deposit.initial | currency : 'DT' : 3}}
+          td {{res.deposit.periodic | currency : 'DT' : 3}}
+          td {{res.def.user.pos.code}}
+          td
+            a.btn.btn-success.btn-block(type='button', href='#/savings/{{policyType}}/{{res.def.ref}}') Consulter
+     

@@ -1,0 +1,10 @@
+.row
+  .col-sm-4.form-group
+    label.control-label Date d'effet
+    div(data-fields='effectiveDate')
+  .col-sm-4.form-group
+    label.control-label Date d'échéance principale
+    div(data-fields='primaryTermDate')
+  .col-sm-4.form-group
+    label.control-label Date d'échéance terme
+    .form-control-static(data-values='intermediateTermDate')!= '<%= _.beautifyDate(intermediateTermDate) %>'

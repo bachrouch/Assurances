@@ -1,0 +1,45 @@
+.process-form accordion .panel-group .panel {
+  margin-bottom: 10px;
+}
+
+.process-form accordion .panel-title {
+  color: #555;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.process-form button .glyphicon {
+  margin-right: 14px;
+}
+
+.process-form button {
+  text-align: left;
+}
+
+.process-act button {
+  text-align: left;
+}
+
+.process-act button {
+  margin-top: 5px;
+}
+
+.process-act button .glyphicon {
+  margin-right: 14px;
+}
+
+.process-act a .glyphicon {
+  margin-right: 14px;
+}
+
+.process-act a {
+  text-align: left;
+}
+
+mark {
+  background: #fce8e3;
+}
+
+#savings-contract .list-unstyled {
+  margin-bottom: 0;
+}

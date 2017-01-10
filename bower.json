@@ -1,0 +1,27 @@
+{
+  "name": "takaful-portal",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.3.6",
+    "angular-bootstrap": "~0.12.0",
+    "angular-chart.js": "~0.6.0",
+    "angular-i18n": "~1.3.6",
+    "angular-moment": "~0.8.3",
+    "angular-route": "~1.3.6",
+    "backbone": "~1.1.2",
+    "backbone-forms": "~0.14.0",
+    "backbone.marionette": "1.8.8",
+    "backgrid": "~0.3.5",
+    "bootbox": "~4.0.0",
+    "bootstrap": "~3.2.0",
+    "jquery": "~2.1.1",
+    "jquery-number": "~2.1.3",
+    "json2": "*",
+    "moment": "~2.8.2",
+    "pikaday": "~1.2.0",
+    "select2": "~3.5.1",
+    "underscore": "~1.6.0",
+    "font-awesome": "fontawesome#^4.6.1"
+  }
+}

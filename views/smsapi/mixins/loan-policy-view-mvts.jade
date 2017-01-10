@@ -1,0 +1,13 @@
+mixin loan_policy_view_mvts(obj)
+  div(ng-controller='LoanPolicyMvtsCtrl', ng-init='init("' + obj + '")')
+    table.table.table-condensed.table-striped
+      tr
+        td Contribution
+        td {{computed.premium | currency : 'DT' : 3}}
+      tr
+        td Frais de contrat
+        td {{computed.fees | currency : 'DT' : 3}}
+      tr
+        td Total
+        td 
+          strong {{computed.total - computed.taxEco | currency : 'DT' : 3}}

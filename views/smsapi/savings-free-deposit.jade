@@ -1,0 +1,14 @@
+include /smsapi/mixins/savings-policy-view-summary
+include /smsapi/mixins/savings-policy-view-chart
+include /smsapi/mixins/savings-policy-view-sits
+#savings-free-deposit
+  .page-header: h3 Versement libre - Contrat d'assurance vie {{policy.def.ref}} - {{policy.def.ver}} - {{policy.def.user.fullName}}
+  .col-sm-10.process-form
+    include /smsapi/partials/savings-error
+    .panel.panel-default
+      .panel-heading
+        h4.panel-title Versement libre
+      .panel-body
+        include /smsapi/partials/savings-policy-form-free-dep
+  .col-sm-2.process-act
+    include /smsapi/partials/savings-act-free-dep

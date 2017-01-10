@@ -1,0 +1,4 @@
+alert(type='danger', ng-hide='errors.isEmpty')
+  p(ng-repeat='(field, fieldErr) in errors')
+    b {{field}}
+    | : {{fieldErr}}

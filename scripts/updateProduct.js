@@ -1,0 +1,1 @@
+db.product.update({}, {$set: {'def.fromDate': '2014-01-01', 'def.toDate': null, 'def.status': 1}}, {multi: true});

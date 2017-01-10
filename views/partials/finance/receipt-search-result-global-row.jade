@@ -1,0 +1,12 @@
+td(data-values='reference')
+  a(href!= '#receipt/<%= reference %>/consult', title!= '<%= reference %>')
+    button.btn.btn-link(type='button') <%= reference %>
+td(data-values='fromDate')!= '<%= _.beautifyDate(fromDate) %>'
+td(data-values='contract')!= '<%= contract %>'
+td(data-values='subscriberName')!= '<%= subscriberName %>'
+td(data-values='total')!= '<%= _.beautifyAmount(total, true) %>'
+td(data-values='due')!= '<%= _.beautifyAmount(due, true) %>'
+td(data-values='totalCommission')!= '<%= _.beautifyAmount(totalCommission, true) %>'
+td(data-values='user')!= '<%= user %>'
+td
+  a.btn.btn-block.btn-success(data-actions='consult') Consulter

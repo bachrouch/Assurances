@@ -1,0 +1,11 @@
+table.table
+  thead
+    tr
+      th N° Nat.
+      th Nom
+      th Date naissance
+  tbody
+    tr
+      td!= '<%= id %>'
+      td!= '<%= name %>'
+      td!= '<%= _.beautifyDate(birthDate) %>'

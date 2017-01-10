@@ -1,0 +1,11 @@
+td(data-values='reference')
+  a(href!= '#receipt/<%= reference %>/consult', title!= '<%= reference %>')
+    button.btn.btn-link(type='button') <%= nature %>-<%= reference %>
+td(data-values='fromDate')!= '<%= _.beautifyDate(fromDate) %>'
+td(data-values='contract')!= '<%= contract %>'
+td(class = 'td-Name', data-values='subscriberName')!= '<%= subscriberName %>'
+td(data-values='total')!= '<%= _.beautifyAmount(total, true) %>'
+td(data-values='due')!= '<%= _.beautifyAmount(due, true) %>'
+td
+  a(type = 'button' ,data-actions='add' title='Ajouter')
+    span.glyphicon.glyphicon-plus.btn-success.btn-xs

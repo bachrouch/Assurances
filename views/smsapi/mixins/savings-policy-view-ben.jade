@@ -1,0 +1,5 @@
+mixin savings_policy_view_ben(evt)
+  ul.list-unstyled
+    li(ng-repeat='ben in policy.' + evt + 'Ben')
+      mark: b {{ben.name}}
+      |  = {{ben.relation | actorRelation}} => {{ben.percent | percent}}

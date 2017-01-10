@@ -1,0 +1,21 @@
+tr
+  td
+    a(type = 'button', data-actions='details')
+      span.glyphicon.glyphicon-list.btn-success.btn-sm
+  td(data-values='number')!= '<%= number %>'
+  td(data-values='registrationNumber')!= '<%= registrationNumber %>'
+  td(data-values='usageDesc')!= '<%= usageDesc %>'
+  td(data-values='premium')!= '<%= _.beautifyAmount(premium) %>'
+  td(data-values='taxes')!= '<%= _.beautifyAmount(taxes) %>'
+  td(data-values='stamps')!= '<%= _.beautifyAmount(stamps) %>'
+  td(data-fields='attestationNumber')
+  td.col-sm-1(data-fields='bonus')
+  td
+    a(type = 'button', data-actions='saveBonus')
+      span.glyphicon.glyphicon-floppy-disk.btn-success.btn-sm
+  td
+    a(type = 'button', data-actions='printAtt')
+      span.glyphicon.glyphicon-print.btn-primary.btn-sm
+  td
+    a(type = 'button', data-actions='printVehicle')
+      span.glyphicon.glyphicon-bookmark.btn-success.btn-sm  

@@ -1,0 +1,29 @@
+div
+  table.table.table-striped
+    thead
+      tr
+
+        th Num Bs
+        th Num Tel
+        th Nom
+        th Prenom
+        th Texte
+        th Date Envoi
+        th Status
+        th Envoyer
+        //th Assuré
+        //th Ver. Initial
+        //th Ver. périodique
+        //th Intermédiaire
+        th
+    tbody
+        tr(ng-repeat='res in results')
+          td {{res.smsList[0].numBs}}
+          td {{res.smsList[0].numTel}}
+          td {{res.smsList[0].nom}}
+          td {{res.smsList[0].prenom}}
+          td {{res.smsList[0].text}}
+          td {{res.smsList[0].dateEnvoi}}
+          td {{res.smsList[0].status}}
+          td
+            a.btn.btn-success.btn-block(type='button',ng-click='redirectSms()' ) Envoyer SMS

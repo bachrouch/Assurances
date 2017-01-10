@@ -1,0 +1,9 @@
+td(data-values='contract')!= '<%= contract %>'
+td(data-values='statusDesc')!= '<%= statusDesc %>'
+td(data-values='date')!= '<%= _.beautifyDate(date) %>'
+td(data-values='fromDate')!= '<%= _.beautifyDate(fromDate) %>'
+td(data-values='toDate')!= '<%= _.beautifyDate(toDate) %>'
+td(data-values='subscriberName')!= '<%= subscriberName %>'
+td(data-values='total')!= '<%= _.beautifyAmount(total, true) %>'
+td
+  a.btn.btn-block(data-actions='consult') Consulter

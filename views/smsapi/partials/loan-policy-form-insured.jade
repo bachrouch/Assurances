@@ -1,0 +1,9 @@
+form(role='form', novalidate)
+  .col-sm-4.form-group
+    label.control-label Titre
+    select.form-control(ng-model='policy.insured.gender',
+      ng-options='v.code as v.label for v in enums.actor.genders')
+  .col-sm-4.form-group
+    label.control-label Date de naissance
+    input.form-control(type='date',
+      ng-model='policy.insured.birthDate')

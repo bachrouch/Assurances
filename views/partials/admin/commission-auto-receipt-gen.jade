@@ -1,0 +1,12 @@
+table.table
+  thead
+    tr
+      th Total TTC de la quittance
+      th Solde total de commission
+      th Générer
+  tbody
+    tr
+      td.col-sm-5(data-values='receiptTotal')!= '<%= _.beautifyAmount(receiptTotal()) %>'
+      td.col-sm-5(data-values='totalCommission')!= '<%= _.beautifyAmount(totalCommission()) %>'
+      td.col-sm-2.tkf-button
+        a.btn.btn-block.glyphicon.glyphicon-download-alt.btn-warning(data-actions='generateAutoReceipt')  Générer

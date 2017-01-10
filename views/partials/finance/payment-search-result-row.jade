@@ -1,0 +1,10 @@
+td(data-values='reference')
+ a(href!= '#payment/<%= reference %>/consult', title!= '<%= reference %>')
+    button.btn.btn-link(type='button') <%= reference %>
+td(data-values='status')!= '<%=  updateStatus() %>'
+td(data-values='nbReceipts')!= '<%= nbReceipts %>'
+td(data-values='paid')!= '<%= _.beautifyAmount(paid(), true)%>'
+td(data-values='creationDate')!= '<%= _.beautifyDate(creationDate) %>'
+td(data-values='closingDate')!= '<%= _.beautifyDate(closingDate) %>'
+td
+  a.btn.btn-block.btn-success(data-actions='consultPayment') Consulter

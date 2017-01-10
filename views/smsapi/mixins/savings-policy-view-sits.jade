@@ -1,0 +1,24 @@
+mixin savings_policy_view_sits(obj)
+  table.table.table-bordered.table-striped(ng-controller='SavingsPolicySitsCtrl', ng-init='init("' + obj + '")')
+    thead
+      tr
+        th Année
+        th Contribution totale
+        th Gain d'impôts
+        th(ng-hide='!withTerm') Contribution prévoyance au 01/01
+        th(ng-hide='!withD') Cap. Décès
+        th(ng-hide='!withAD') Cap. DC Acc
+        th(ng-hide='!withI') Cap. Inval
+        th(ng-hide='!withAI') Cap. I Acc
+        th Epargne prévisionnelle au 31/12
+    tbody
+      tr(ng-repeat='sit in sits')
+        td {{sit.year}}
+        td {{sit.premium | currency : '' : 0}}
+        td {{sit.taxEco | currency : '' : 0}}
+        td(ng-hide='!withTerm') {{sit.term | currency : '' : 3}}
+        td(ng-hide='!withD') {{max('d', sit.d, sit.cumul) | currency : '' : 0}}
+        td(ng-hide='!withAD') {{max('ad', sit.ad, sit.cumul) | currency : '' : 0}}
+        td(ng-hide='!withI') {{max('i', sit.i, sit.cumul) | currency : '' : 0}}
+        td(ng-hide='!withAI') {{max('ai', sit.ai, sit.cumul) | currency : '' : 0}}
+        td {{sit.cumul | currency : 'DT' : 0}}

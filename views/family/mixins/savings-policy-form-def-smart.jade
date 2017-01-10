@@ -1,0 +1,17 @@
+mixin savings_policy_form_def_smart(obj)
+  form(role='form',
+    ng-controller='SavingsPolicyDefSmart',
+    ng-init='init("' + obj + '")',
+    novalidate)
+    .row
+      .col-sm-4.form-group
+        label.control-label Terme
+        select.form-control(ng-model='termMode',
+          ng-options='v.code as v.label for v in enums.policy.terms')
+      .col-sm-4.form-group
+        label Durée
+        input.form-control(type='number', min=0,
+          ng-model='duration', ng-disabled='termMode !== "f"')
+      .col-sm-4.form-group
+        label Date d'échéance
+        p.form-control-static {{def.termDate | date : 'shortDate'}}

@@ -1,0 +1,5 @@
+ul.list-unstyled
+  li(ng-repeat='term in policy.terms')
+    mark: b {{term.evt | termEvt}}
+    mark: b {{term.type | termType}}
+    mark: b {{term.cap | currency : 'DT' : 0}}

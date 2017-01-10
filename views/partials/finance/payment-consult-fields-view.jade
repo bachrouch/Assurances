@@ -1,0 +1,13 @@
+table.table.summary
+  tr
+    th.receipt Création
+    td.receipt!='<%= _.beautifyDate(creationDate) %>'
+  tr
+    th.receipt Clôture
+    td.receipt!='<%= _.beautifyDate(closingDate) %>'
+  tr
+    th.receipt Statut
+    td.receipt!='<%= updateStatus() %>'
+  tr
+    th.receipt Quittances
+    td.receipt!='<%= _.size(receipts) %>'

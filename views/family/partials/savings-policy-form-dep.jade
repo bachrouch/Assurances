@@ -1,0 +1,26 @@
+form(role='form', novalidate)
+  .row
+    .col-sm-4.form-group
+      label.control-label Versement initial
+      input.form-control(type='number',
+        min=0,
+        ng-model='policy.deposit.initial')
+    .col-sm-4.form-group
+      label.control-label Versement périodique
+      input.form-control(type='number',
+        min=0,
+        ng-model='policy.deposit.periodic')
+    .col-sm-4.form-group
+      label.control-label Majoration annuelle
+      input.form-control(type='number',
+        min=0,
+        ng-model='policy.deposit.updateRate')
+  .row
+    .col-sm-4.form-group
+      label.control-label Fréquence de versement
+      select.form-control(ng-model='policy.deposit.period',
+        ng-options='v.code as v.label for v in enums.policy.periods')
+    .col-sm-4.form-group
+      label.control-label Date première échéance
+      select.form-control(ng-model='debitDay',
+          ng-options='v.code as v.label for v in enums.finance.debitDays')

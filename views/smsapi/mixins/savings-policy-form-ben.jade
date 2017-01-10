@@ -1,0 +1,34 @@
+mixin savings_policy_form_ben(obj, evt)
+  form(role='form',
+    ng-controller='SavingsPolicyBenCtrl', ng-init='init("' + obj + '", "' + evt + '")',
+    ng-submit='addBen()',
+    novalidate)
+    table.table
+      tr
+        th.col-sm-3 Nom
+        th.col-sm-2 Date Naissance
+        th.col-sm-2 C.I.N
+        th.col-sm-2 Parenté / Assuré
+        th.col-sm-2 Part
+        th.col-sm-1 Action
+      tr(ng-repeat='b in ben')
+        td {{b.name}}
+        td {{b.birthDate | date}}
+        td {{b.id}}
+        td {{b.relation | actorRelation}}
+        td {{b.percent | percent}}
+        td.center-block
+          button.btn.btn-danger.btn-xs(ng-click='delBen($index)'): i.glyphicon.glyphicon-remove
+      tr
+        td: input.form-control(type='text',
+              ng-model='cur.name')
+        td: input.form-control(type='date',
+              ng-model='cur.birthDate')
+        td: input.form-control(type='text',
+              ng-model='cur.id')
+        td: select.form-control(ng-model='cur.relation',
+              ng-options='v.code as v.label for v in enums.actor.relations')
+        td: input.form-control(type='number',
+              ng-model='cur.percent')
+        td.center-block
+          button.btn.btn-success.btn-xs(type='submit'): i.glyphicon.glyphicon-plus

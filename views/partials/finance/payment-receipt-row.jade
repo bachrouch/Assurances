@@ -1,0 +1,21 @@
+tr
+  td(data-values='reference')
+    a(href!= '#receipt/<%= reference %>/consult', title!= '<%= reference %>')
+      button.btn-link(type='button')<%= reference %>
+  td(data-values='contract')!= '<%= contract%>'
+  td(class='td-Name',data-values='total')!= '<%= _.beautifyAmount(total, true) %>'
+  td(data-values='totalCommission')!= '<%= _.beautifyAmount(totalCommission, true)%>'
+  td(class='td-Name',data-values='due')!= '<%= _.beautifyAmount(due, true)%>'
+  td(class='td-Name',data-fields='toAffect')
+  td(data-values='commissionAffected')!= '<%= _.beautifyAmount(commissionAffected, true)%>'
+  td(class='td-Name',data-values='toPay')!= '<%= _.beautifyAmount(toPay, true)%>'
+  td
+    a(type = 'button' ,data-actions='erase' title='Annuler')
+      - if ( !isNotDeletable ) {
+          span.glyphicon.glyphicon-remove.btn-danger.btn-xs
+      - }
+  td
+    a(type = 'button' ,data-actions='autoPostpone' title='Reporter')
+      - if ( !isNotDeletable ) {
+          span.glyphicon.glyphicon-step-forward.btn-primary.btn-xs
+      - }

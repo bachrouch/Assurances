@@ -1,0 +1,13 @@
+table.table.summary
+  tr
+    th.receipt Tot. à régler
+    td.receipt!='<%= _.beautifyAmount(totalToPay ()) %>'
+  tr
+    th.receipt Tot. réglé
+    td.receipt!='<%= _.beautifyAmount(totalPaid()) %>'
+  tr
+    th.receipt Solde FC
+    td.receipt!= '<%= _.beautifyAmount(balance) %>'
+  tr
+    th.receipt Solde Com.
+    td.receipt!= '<%= _.beautifyAmount(commissionToPay()) %>'

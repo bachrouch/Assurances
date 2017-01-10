@@ -1,0 +1,48 @@
+mixin savings_policy_form_terms_smart(obj)
+  form(role='form',
+    ng-controller='SavingsPolicyTermsSmartCtrl',
+    ng-init='init("' + obj + '")',
+    novalidate)
+    .row
+      .col-sm-4.form-group
+        label.control-label
+        .checkbox
+          label
+            input(type='checkbox',
+              ng-model='withTerms')
+            | Garanties Prévoyance
+      .col-sm-4.form-group
+        label.control-label Type
+        select.form-control(ng-model='type',
+          ng-disabled='!withTerms',
+          ng-options='v.code as v.label for v in enums.term.types')
+      .col-sm-4.form-group
+        label.control-label Capital Décès
+        select.form-control(ng-model='d',
+          ng-disabled='!withTerms',
+          ng-options='v.code as v.label for v in enums.term.capitals')
+    .row
+      .col-sm-4.form-group
+        label.control-label
+        .checkbox
+          label
+            input(type='checkbox',
+              ng-model='ad',
+              ng-disabled='!withTerms || !d')
+            | Décès Accidentel
+      .col-sm-4.form-group
+        label.control-label
+        .checkbox
+          label
+            input(type='checkbox',
+              ng-model='i',
+              ng-disabled='!withTerms')
+            | IPP et IPT
+      .col-sm-4.form-group
+        label.control-label
+        .checkbox
+          label
+            input(type='checkbox',
+              ng-model='ai',
+              ng-disabled='!withTerms || !i ||!ad')
+            | IPP et IPT Accidentelle

@@ -1,0 +1,5 @@
+span(ng-show='policy.deposit.initial')
+  mark: b {{policy.deposit.initial | currency : 'DT' : 3}}
+  |  le {{policy.def.effDate | date}}
+span(ng-hide='policy.deposit.initial')
+  mark: b Pas de versement

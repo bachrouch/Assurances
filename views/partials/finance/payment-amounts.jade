@@ -1,0 +1,13 @@
+table.table.summary
+  tr
+    th.receipt Contr. payée
+    td.receipt!= '<%= _.beautifyAmount(affected()) %>'
+  tr
+    th.receipt Com. cédée
+    td.receipt!= '<%= _.beautifyAmount(commission()) %>'
+  tr
+    th.receipt Net à payer
+    td.receipt!= '<%= _.beautifyAmount(toPay()) %>'
+  tr
+    th.receipt Ret. Source
+    td.receipt!= '<%= _.beautifyAmount(ras()) %>'

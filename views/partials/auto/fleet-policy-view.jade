@@ -1,0 +1,23 @@
+.row
+  .col-sm-3.form-group
+    label.control-label N° police
+    .form-control-static(data-values='reference')!= '<%= reference %>'
+  .col-sm-3.form-group
+    label.control-label Date d'effet
+    .form-control-static(data-values='effectiveDate')!= '<%= _.beautifyDate(effectiveDate) %>'
+  .col-sm-3.form-group
+    label.control-label Date d'échéance
+    .form-control-static(data-values='primaryTermDate')!= '<%= _.beautifyDate(primaryTermDate) %>'
+  .col-sm-3.form-group
+    label.control-label Nbre de véhicules
+    .form-control-static(data-values='vehicleCount')!= '<%= vehicleCount %>'
+.row
+  .col-sm-3.form-group
+    label.control-label Souscripteur
+    .form-control-static(data-values='subscriberName')!= '<%= subscriberName %>'
+  .col-sm-6.form-group
+    label.control-label Adresse
+    .form-control-static(data-values='subscriberAddress')!= '<%= subscriberAddress %>'
+  .col-sm-3.form-group
+    label.control-label Contact
+    .form-control-static(data-values='subscriberPhone')!= '<%= subscriberPhone %>'

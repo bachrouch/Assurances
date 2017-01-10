@@ -1,0 +1,22 @@
+form(role='form', novalidate)
+    ion-pane
+      ion-header-bar.bar-stable
+        h1.title Sending Message
+      |     
+      ion-content(ng-controller='SendSmsCtrl')
+        .list.list-inset
+          h3 Send Message
+          |         
+          label.item.item-input.item-floating-label
+            span.input-label Message To
+            |           
+            input(type='text', placeholder='Message To', ng-model='msgTo')
+          |         
+          label.item.item-input.item-floating-label
+            span.input-label Message Text
+            |           
+            textarea(type='tel', placeholder='Message Text', ng-model='msgText')
+          |         
+          button.button.button-full.button-assertive(ng-disabled='!(msgTo && msgText) || processing', ng-click='sendMessage()')
+            span.glyphicon.glyphicon-search
+            | Send Message

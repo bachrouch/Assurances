@@ -1,0 +1,31 @@
+.form-horizontal
+  .form-group
+    label.control-label.col-sm-2 Num. National
+    .col-sm-10(data-fields='id')
+  .form-group
+    label.control-label.col-sm-2 Nom
+    .col-sm-2(data-fields='gender')
+    .col-sm-4(data-fields='firstName')
+    .col-sm-4(data-fields='lastName')
+  .form-group
+    label.control-label.col-sm-2 D. Naissance
+    .col-sm-5(data-fields='birthDate')
+  .form-group
+    label.control-label.col-sm-2 Profession
+    .col-sm-10(data-fields='socialprofession')
+  .form-group
+    label.control-label.col-sm-2 Téléphone
+    .col-sm-4(data-fields='phone1')
+    label.control-label.col-sm-2 Email
+    .col-sm-4(data-fields='email1')
+  .form-group
+    label.control-label.col-sm-2 Adresse
+    .col-sm-10(data-fields='address')
+  .form-group
+    label.control-label.col-sm-2 Code postal
+    .col-sm-4(data-fields= 'postalCode')
+    .col-sm-3(data-values='delegation') <%= delegation %>
+    .col-sm-2(data-values='governorate') <%= governorate %>
+  .form-group
+    label.control-label.col-sm-2 Localité
+    .col-sm-5(data-fields="locality")

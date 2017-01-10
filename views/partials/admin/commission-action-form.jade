@@ -1,0 +1,41 @@
+div
+  table.table
+    thead
+      tr
+        th Identifier la quittance
+        th
+    tbody
+      tr
+        td.col-sm-10(data-fields='identifiedComments')
+        td.col-sm-2
+          a.btn.btn-block.glyphicon.glyphicon-list-alt.btn-success(data-actions='identify')  Identifier
+  table.table
+    thead
+      tr
+        th Transférer la quittance
+        th
+    tbody
+      tr
+        td.col-sm-10(data-fields='transferredComments')
+        td.col-sm-2
+          a.btn.btn-block.glyphicon.glyphicon-list-alt.btn-success(data-actions='transfer')  Transférer
+  table.table
+    thead
+      tr
+        th Demande d'informations
+        th
+    tbody
+      tr
+        td.col-sm-10(data-fields='requestComments')
+        td.col-sm-2
+          a.btn.btn-block.glyphicon.glyphicon-list-alt.btn-success(data-actions='request')  Demande
+  table.table
+    thead
+      tr
+        th Clôturer l'anomalie
+        th
+    tbody
+      tr
+        td.col-sm-10(data-fields='closedComments')
+        td.col-sm-2
+          a.btn.btn-block.glyphicon.glyphicon-list-alt.btn-success(data-actions='close')  Clôturer

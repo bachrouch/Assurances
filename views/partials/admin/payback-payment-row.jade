@@ -1,0 +1,12 @@
+td(data-values='reference')
+ a(href!= '#payment/<%= reference %>/validate', title!= '<%= reference %>')
+    button.btn.btn-link(type='button') <%= reference %>
+td(data-values='nbReceipts')!= '<%= nbReceipts %>'
+td(data-values='balance')!= '<%= _.beautifyAmount(balance, true)%>'
+td(data-values='creationDate')!= '<%= _.beautifyDate(creationDate) %>'
+td(data-values='closingDate')!= '<%= _.beautifyDate(closingDate) %>'
+td(data-values='paid')!= '<%= _.beautifyAmount(paid(), true)%>'
+td(data-values='paid')!= '<%= _.beautifyAmount(commissionToPay(), true)%>'
+td
+  a(type = 'button' ,data-actions='erase' title = 'Annuler')
+    span.glyphicon.glyphicon-remove.btn-danger.btn-xs

@@ -1,0 +1,85 @@
+form(role='form', novalidate)
+  .row
+    .col-sm-4.form-group
+      label.control-label Taux de rendement
+      input.form-control(type='number',
+        min=0,
+        max=1,
+        ng-model='policy.admin.depEarnRate')
+    .col-sm-4.form-group
+      label.control-label Frais de contrat
+      input.form-control(type='number',
+        min=0,
+        ng-model='policy.admin.feesIni')
+    .col-sm-4.form-group
+      label.control-label Frais de versement
+      input.form-control(type='number',
+        min=0,
+        ng-model='policy.admin.feesDep')
+  .row
+    .col-sm-4.form-group
+      label.control-label Versement ini min
+      input.form-control(type='number',
+        min=0,
+        ng-model='policy.admin.depIniMin')
+    .col-sm-4.form-group
+      label.control-label Commission ini
+      input.form-control(type='number',
+        min=0,
+        max=1,
+        ng-model='policy.admin.depIniComRate')
+    .col-sm-4.form-group
+      label.control-label Versement per min
+      input.form-control(type='number',
+        min=0,
+        ng-model='policy.admin.depPerMin')
+  .row
+    .col-sm-4.form-group
+      label.control-label Commission lib min
+      input.form-control(type='number',
+        min=0,
+        max=1,
+        ng-model='policy.admin.depFreeMinComRate')
+    .col-sm-4.form-group
+      label.control-label Commission lib max
+      input.form-control(type='number',
+        min=0,
+        max=1,
+        ng-model='policy.admin.depFreeMaxComRate')
+    .col-sm-4.form-group
+      label.control-label Commission lib def
+      input.form-control(type='number',
+        min=0,
+        max=1,
+        ng-model='policy.admin.depFreeDefComRate')
+  .row
+    .col-sm-4.form-group
+      label.control-label
+      .checkbox
+        label
+          input(type='checkbox',
+            ng-model='policy.admin.updateCom')
+          | Surcharger commission
+  .row
+    - var i = 0;
+    - while (i < 6){
+      .col-sm-2.form-group
+        label.control-label= 'Com '  + (i+1)
+        input.form-control(type='number',
+          ng-disabled='!policy.admin.updateCom',
+          min=0,
+          max=1,
+          ng-model='policy.admin.depPerComRate[' + i + ']')
+    - i++;
+    -  }
+  .row
+    - while (i <12){
+      .col-sm-2.form-group
+        label.control-label= 'Com '  + (i+1)
+        input.form-control(type='number',
+          min=0,
+          max=1,
+          ng-disabled='!policy.admin.updateCom',
+          ng-model='policy.admin.depPerComRate[' + i + ']')
+    - i++;
+    -  }

@@ -1,0 +1,23 @@
+.row
+  .col-sm-6.summary-1
+    table.table.summary
+      tr
+        th.summary.reference Contribution
+        td.summary.reference!= '<%= _.beautifyAmount(premium) %>'
+      tr
+        th.summary Frais
+        td.summary!= '<%= _.beautifyAmount(fees) %>'
+      tr
+        th.summary Commission
+        td.summary!= '<%= _.beautifyAmount(commission) %>'
+      tr
+        th.summary TTC
+        td.summary!= '<%= _.beautifyAmount(total) %>'
+  .col-sm-6.summary-2
+    table.table.summary
+      tr
+        th.reference Taxes
+        td.reference!= '<%= getTaxes () %>'
+      tr
+        th Timbres
+        td!= '<%= getStamps() %>'

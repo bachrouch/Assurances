@@ -1,0 +1,11 @@
+ul.list-unstyled
+  li
+    | Modifié le 
+    mark: b {{date | date : 'short'}}
+    |  par 
+    mark: b {{policy.def.user.fullName}}
+  li
+    | Effectif du 
+    mark: b {{policy.def.effDate | date : 'shortDate'}}
+    |  au 
+    mark: b {{policy.def.termDate | date : 'shortDate'}}

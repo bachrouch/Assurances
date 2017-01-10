@@ -1,0 +1,50 @@
+div
+  .form-horizontal
+    .form-group
+      .col-sm-1
+        label.control-label Référence
+      .col-sm-2
+        div(data-fields='reference')
+      .col-sm-1
+        label.control-label Statut
+      .col-sm-2
+        div(data-fields='status')
+      .col-sm-1
+        label.control-label Interm.
+      .col-sm-2
+        div(data-fields='pos')
+      .col-sm-1
+        label.control-label Chèque
+      .col-sm-2
+        div(data-fields='settlementReference')
+    .form-group
+      .col-sm-1
+        label.control-label Création
+      .col-sm-2
+        div(data-fields='fromCreationDate')
+      .col-sm-1
+        label.control-label Création
+      .col-sm-2
+        div(data-fields='toCreationDate')
+      .col-sm-1
+        label.control-label Clôture
+      .col-sm-2
+        div(data-fields='fromClosingDate')
+      .col-sm-1
+        label.control-label Clôture
+      .col-sm-2
+        div(data-fields='toClosingDate')
+    .form-group
+      .col-sm-1
+        label Brouillons
+      .col-sm-1
+        div(data-fields='includeDraft')
+      .col-sm-1
+        label Solde !=0
+      .col-sm-1
+        div(data-fields='nonZeroBalance')
+      .col-sm-4
+      .col-sm-2
+          a.btn.btn-block.btn-warning(data-actions='search') Rechercher
+      .col-sm-2
+          a.btn.btn-block.btn-default.disabled(data-actions='exportResult') Exporter

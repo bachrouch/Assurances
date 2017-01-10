@@ -1,0 +1,29 @@
+include /family/mixins/savings-policy-form-def-smart
+include /family/mixins/savings-policy-form-dep-smart
+include /family/mixins/savings-policy-form-terms-smart
+include /family/mixins/savings-policy-view-summary
+include /family/mixins/savings-policy-view-chart
+include /family/mixins/savings-policy-view-sits
+#savings-subscribe
+  .page-header: h3 Simulation d'une assurance vie
+  .col-sm-10.process-form
+    include /family/partials/savings-error
+    accordion(close-others='true')
+      accordion-group(heading='{{computed.insured}}')
+        include /family/partials/savings-policy-form-insured
+      accordion-group(heading='{{computed.def}}')
+        +savings_policy_form_def_smart('draft')
+      accordion-group(heading='{{computed.deposit}}')
+        +savings_policy_form_dep_smart('draft')
+      accordion-group(heading='{{computed.terms}}')
+        +savings_policy_form_terms_smart('draft')
+    h3 Prévision de l'évolution de l'épargne
+    .panel.panel-default
+      .panel-body
+        .col-sm-6
+          +savings_policy_view_summary('draft')
+        .col-sm-6
+          +savings_policy_view_chart('draft')
+    +savings_policy_view_sits('draft')
+  .col-sm-2.process-act
+    include /family/partials/savings-act-subscribe

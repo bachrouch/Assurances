@@ -1,0 +1,7 @@
+td(data-values='reference')
+  a(href!= '#payment/<%= reference %>/validate', title!= '<%= reference %>')
+    button.btn.btn-link(type='button') <%= reference %>
+td(data-values='paid')!= '<%= _.beautifyAmount(paid(), true) %>'
+td(data-values='balance')!= '<%= _.beautifyAmount(balance, true) %>'
+td(data-values='commission')!= '<%= _.beautifyAmount(commission(), true)%>'
+td(data-values='commissionToPay')!= '<%= _.beautifyAmount(commissionToPay(), true)%>'

@@ -1,0 +1,20 @@
+table.table.summary
+    tr
+      th.subscriber Souscripteur
+      td.subscriber!= '<%= subscriberName %>'
+table.table.summary
+    tr
+      th.receipt Contrat
+      td.receipt!= '<%= contract %>'
+      th Avenant
+      td.receipt!= '<%= endorsement %>'
+    tr
+      th.receipt Date d'effet
+      td.receipt!= '<%= _.beautifyDate(fromDate) %>'
+      th Date de fin
+      td.receipt!= '<%= _.beautifyDate(toDate) %>'
+    tr
+      th.receipt Contr. TTC
+      td.receipt!= '<%= _.beautifyAmount(total) %>'
+      th Non recouvré
+      td.receipt!= '<%= _.beautifyAmount(due) %>'

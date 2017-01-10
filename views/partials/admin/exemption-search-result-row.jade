@@ -1,0 +1,14 @@
+td(data-values='reference')
+  a(href!= '#exemption/<%= reference %>/consult', title!= '<%= reference %>')
+    button.btn.btn-link(type='button') <%= reference %>
+td(data-values='pos')!= '<%= getPos() %>'
+td(data-values='creationDate')!= '<%= _.beautifyDate(creationDate) %>'
+td(data-values='closingDate')!= '<%= _.beautifyDate(closingDate) %>'
+td(data-values='status')!= '<%= updateStatus() %>'
+td(data-values='type')!= '<%= updateExemptionType() %>'
+td(data-values='num')
+  a(href!= 'admin#payment/<%= getNum() %>/consult', title!= '<%= getNum() %>')
+    button.btn.btn-link(type='button') <%= getNum() %>
+td
+  a(href!= '#exemption/<%= reference %>/manage', title!= Contrôler)
+    button.btn.btn-block.btn-success(type='manage') Contrôler

@@ -1,0 +1,18 @@
+form(role='form', novalidate)
+  .col-sm-3.form-group
+    label.control-label Capital
+    input.form-control(type='number',
+      ng-model='policy.def.capital')
+  .col-sm-3.form-group
+    label.control-label Date d'effet
+    input.form-control(type='date',
+      ng-model='policy.def.effDate')
+  .col-sm-3.form-group
+    label.control-label Date fin
+    input.form-control(type='date',
+      ng-model='policy.def.termDate')
+  .col-sm-3.form-group
+    label.control-label Franchise
+    input.form-control(type='number',
+      ng-model='policy.def.deductible')
+

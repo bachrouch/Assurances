@@ -1,0 +1,13 @@
+table.table
+  thead
+    tr
+      th Montant
+      th Date de déblocage
+      th Durée
+      th Franchise
+  tbody
+    tr
+      td!= '<%= _.beautifyAmount(amount) %>'
+      td!= '<%= _.beautifyDate(releaseDate) %>'
+      td!= '<%= _.beautifyAmount(duration) %>'
+      td!= '<%= _.beautifyAmount(deductible) %>'

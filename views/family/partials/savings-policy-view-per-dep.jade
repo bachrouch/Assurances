@@ -1,0 +1,9 @@
+span(ng-show='policy.deposit.periodic')
+  mark: b {{policy.deposit.period | policyPeriod}}s
+  |  sur
+  mark: b {{computed.pdDuration}}
+  |  de
+  mark: b {{policy.deposit.periodic | currency : 'DT' : 3}}
+  |  {{computed.pdAdjustment}}
+span(ng-hide='policy.deposit.periodic')
+  mark: b Pas de versements

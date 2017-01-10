@@ -1,0 +1,20 @@
+.panel.panel-default
+  .panel-heading: h3.panel-title Critères
+  .panel-body
+    .form-horizontal
+      .form-group
+        .col-sm-2
+          label.control-label N° Contrat
+        .col-sm-3(data-fields='contract')
+        .col-sm-4
+        .col-sm-3
+          a.btn.btn-block.glyphicon.glyphicon-search.btn-warning(data-actions='searchProd')
+            span Rechercher
+      .form-group
+        .col-sm-2
+          label.control-label Branche
+        .col-sm-4(data-fields='branch')
+        .col-sm-2
+          label.control-label Produit
+        .col-sm-4(data-fields='product')
+        

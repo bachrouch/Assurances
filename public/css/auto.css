@@ -1,0 +1,51 @@
+/*begin auto*/
+
+.col-sm-6.tkf-auto-index-2 h1,
+.col-sm-6.tkf-auto-index-1 h1 {
+  color: #000000;
+  text-align: left;
+  font-weight: 650;
+  margin-bottom: 8px;
+  margin-top: 25px;
+}
+
+.col-sm-6.tkf-auto-index-index-1 h1 {
+  font-size: 30px;
+}
+
+.left-paper {
+  left: 40px;
+}
+
+.left-condition {
+  left: 20px;
+}
+
+.left-paper-subtitle {
+  left: 60px;
+}
+
+.tkf-validation-msg {
+  border-radius: 4px;
+  padding-top: 6px;
+  padding-right: 12px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+}
+
+.modal-dialog {
+  width: 800px;
+}
+
+.contribution-message {
+  font-weight: bold;
+  color: red;
+}
+
+.table> tfoot> tr> th {
+  vertical-align: top;
+  border-top: 2px solid #ddd;
+}
+
+
+/*end auto*/

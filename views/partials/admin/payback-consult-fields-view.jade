@@ -1,0 +1,17 @@
+table.table.summary
+  tr
+    th.receipt Intermédiaire
+    td.receipt!='<%= pos %>'
+  tr
+    th.receipt Statut
+    td.receipt!='<%= updateStatus() %>'
+table.table.summary
+  tr
+    th.receipt Création
+    td.receipt!='<%= _.beautifyDate(creationDate) %>'
+    th.receipt Clôture
+    td.receipt!='<%= _.beautifyDate(closingDate) %>'
+table.table.summary
+  tr
+    th.receipt Feuilles de caisse
+    td.receipt!='<%= _.size(payments) %>'

@@ -1,0 +1,11 @@
+tr
+  td(data-values='pos')!= '<%= pos %>'
+  td(data-values='numero')!= '<%= numero %>'
+  td(data-values='nature')!= '<%= nature %>'
+  td(data-values='clientName')!= '<%= clientName %>'
+  td(data-values='subscribeDate')!= '<%= _.beautifyDate(subscribeDate) %>'
+  td(data-values='effectiveDate')!= '<%= _.beautifyDate(effectiveDate) %>'
+  td(data-values='endDate')!= '<%= _.beautifyDate(endDate) %>'
+  td(data-values='vehicle')!= '<%= vehicle %>'
+  td(data-values='premium')!= '<%= _.beautifyAmount(premium) %>'
+  td(data-actions="consult")

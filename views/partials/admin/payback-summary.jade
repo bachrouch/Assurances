@@ -1,0 +1,26 @@
+div.panel.panel-default
+  table.table
+    tr
+      th Com. à payer
+      td(align='right')!= '<%= _.beautifyAmount(comToPay()) %>'
+    tr
+      th RAS
+      td(align='right')!= '<%= _.beautifyAmount(ras()) %>'
+    tr
+      th Com. Nette
+      td(align='right')!= '<%= _.beautifyAmount(toPay()) %>'
+    tr
+      th Soldes FC
+      td(align='right')!= '<%= _.beautifyAmount(paymentBalance) %>'
+    tr
+      th Total à payer
+      td(align='right')!= '<%= _.beautifyAmount(total()) %>'
+    tr
+      th Total payé
+      td(align='right')!= '<%= _.beautifyAmount(paid()) %>'
+    tr
+  table.table
+    .col-sm-6
+      a.btn.btn-block.btn-success(data-actions='save' id='action') Enregistrer
+    .col-sm-6
+      a.btn.btn-block.btn-danger(data-actions='finalize' id='action') Clôturer

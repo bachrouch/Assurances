@@ -1,0 +1,8 @@
+td.col-sm-3(data-values)!= '<%= period %>'
+td.col-sm-2(data-values='amount')!= '<%= _.beautifyAmount(amount) %>'
+td.col-sm-2(data-values='fees')!= '<%= _.beautifyAmount(fees) %>'
+td.col-sm-2(data-values='fga')!= '<%= _.beautifyAmount(fga) %>'
+td.col-sm-2(data-values='total')!= '<%= _.beautifyAmount(total) %>'
+td.col-sm-1
+  a.btn.btn-block.btn-success(title='Sélectionner ce tarif' data-actions='selectPricing')
+    i.fa.fa-check(aria-hidden='true')

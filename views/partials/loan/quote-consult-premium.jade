@@ -1,0 +1,15 @@
+table.table
+  thead
+    tr
+      th Contribution Nette
+      th Frais du Contrat
+      th Contribution Totale
+      th Mortalité
+      th Acquisition 
+  tbody
+    tr
+      td!= '<%= _.beautifyAmount(premium) %>'
+      td!= '<%= _.beautifyAmount(fees) %>'
+      td!= '<%= _.beautifyAmount(totalPremium) %>'
+      td!= '<%= _.beautifyPercent(adjustContribution) %>'
+      td!= '<%= _.beautifyPercent(adjustCommission) %>'

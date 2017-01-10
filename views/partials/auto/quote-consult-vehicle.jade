@@ -1,0 +1,15 @@
+table.table
+  thead
+    tr
+      th Marque
+      th Modèle
+      th Puissance
+      th Date PMC
+      th Immatricule
+  tbody
+    tr
+      td!= '<%= make %>'
+      td!= '<%= model %>'
+      td!= '<%= power %>'
+      td!= '<%= _.beautifyDate(issueDate) %>'
+      td!= '<%= registrationNumber %>'

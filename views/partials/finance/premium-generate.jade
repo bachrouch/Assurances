@@ -1,0 +1,12 @@
+div
+  .row
+    .col-sm-4
+      a.btn.btn-block.btn-warning(data-actions='generateReceipt') Générer Quittance
+    .col-sm-4(data-actions='rcPrint')
+    .col-sm-4
+      p.btn-bllock.bg-danger.tkf-message-text
+  br
+  .row
+    .col-sm-8(data-fields='reportText')
+    .col-sm-4
+      a.btn.btn-block.btn-warning(data-actions='sendError') Envoyer

@@ -1,0 +1,15 @@
+form(role='form', novalidate)
+  .row
+    .col-sm-4.form-group
+      label.control-label
+      .checkbox
+        label
+          input(type='checkbox',
+            ng-model='policy.admin.withoutDebit')
+          | Sans Prélèvement
+    .col-sm-3.form-group
+      label.control-label Minimum pour prélèvement
+      input.form-control(type='number',
+        min=0,
+        max=1,
+        ng-model='policy.admin.minForDebit')

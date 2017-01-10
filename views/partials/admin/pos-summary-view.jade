@@ -1,0 +1,19 @@
+table.table.table-bordered.table-striped
+  tbody
+    tr
+      td: strong Code
+      td!= '<%= code %>'
+      td: strong Nom
+      td(colspan=3)!= '<%= name %>'
+    tr
+      td: strong Entrée
+      td.text-primary!= '<%= _.beautifyDate(activityStart) %>'
+      td: strong Sortie
+      td.text-danger!= '<%= _.beautifyDate(activityEnd) %>'
+      td: strong Agrément
+      td.text-success!= '<%= _.beautifyDate(accreditDate) %>'
+    tr
+      td: strong Profil actuel
+      td(colspan=2)!= '<%= currentProfile %>'
+      td: strong Transcodé vers
+      td.text-success(colspan=2)!= '<%= transcodedTo %>'

@@ -1,0 +1,15 @@
+extends /layouts/main-bb
+
+block append templates
+  include /helpers/common-templates
+  include /helpers/connection-templates
+  include /helpers/actors-templates
+  include /helpers/mySpace-templates
+  include /helpers/finance-templates
+
+block append scripts
+  script(src='/js/common.js')
+  script(src='/js/connection.js')
+  script(src='/js/actors.js')
+  script(src='/js/finance.js')
+  script(src='/js/mySpace.js')

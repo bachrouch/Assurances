@@ -1,0 +1,49 @@
+form(role='form', novalidate)
+  .row
+    .col-sm-3.form-group
+      label.control-label Référence
+      input.form-control(type='string',
+        ng-model='criteria.ref')
+    .col-sm-3.form-group
+      label.control-label CIN
+      input.form-control(type='string',
+        ng-model='criteria.id')
+    .col-sm-3.form-group
+      label.control-label Prénom Souscripteur
+      input.form-control(type='string',
+        ng-model='criteria.subscriberFirstName')
+    .col-sm-3.form-group
+      label.control-label Nom Souscripteur
+      input.form-control(type='string',
+        ng-model='criteria.subscriberName')
+  .row
+    .col-sm-1.form-group
+      label.control-label
+      .checkbox
+        label
+          input(type='checkbox',
+            ng-model='criteria.isQuote')
+          | Devis
+    .col-sm-2.form-group
+      label.control-label Statut
+      select.form-control(ng-model='criteria.policyStatus',
+        ng-options='v.code as v.label for v in enums.policy.status',
+        ng-disabled='criteria.isQuote')
+    .col-sm-3.form-group
+      label.control-label Prénom Assuré
+      input.form-control(type='string',
+        ng-model='criteria.insuredFirstName')
+    .col-sm-3.form-group
+      label.control-label Nom Assuré
+      input.form-control(type='string',
+        ng-model='criteria.insuredName')
+    .col-sm-3.form-group
+      label.control-label Date effet
+      input.form-control(type='date',
+        ng-model='criteria.effDate')
+  .row
+    .col-sm-9
+    .col-sm-3
+      button.btn.btn-warning.btn-block(type='submit', ng-click='search()')
+        span.glyphicon.glyphicon-search
+        | Rechercher

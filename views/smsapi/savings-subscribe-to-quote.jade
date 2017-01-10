@@ -1,0 +1,16 @@
+include /smsapi/mixins/savings-policy-form-subscriber
+include /smsapi/mixins/savings-policy-form-insured-full
+#savings-subscribe-to-quote
+  .page-header: h3 Devis d'une assurance vie
+  .col-sm-10.process-form
+    include /smsapi/partials/savings-error
+    .panel.panel-default
+      .panel-heading: h3.panel-title Souscripteur
+      .panel-body
+        +savings_policy_form_subscriber('quote')
+    .panel.panel-default
+      .panel-heading: h3.panel-title Assuré
+      .panel-body
+        +savings_policy_form_insured_full('quote')
+  .col-sm-2.process-act
+    include /smsapi/partials/savings-act-subscribe-to-contract

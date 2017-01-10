@@ -1,0 +1,10 @@
+tr
+  td(data-values='pos')!= '<%= pos %>'
+  td(data-values='reference')!= '<%= reference %>'
+  td(data-values='contract')!= '<%= contract %>'
+  td(data-values='status')!= '<%= status %>'
+  td(data-values='nature')!= '<%= nature %>'
+  td(data-values='receiptAmount')!= '<%= _.beautifyAmount(receiptAmount) %>'
+  td(data-values='receiptComm')!= '<%= _.beautifyAmount(receiptComm) %>'
+  td(data-values='calculatedComm')!= '<%= _.beautifyAmount(calculatedComm) %>'
+  td(data-actions="consult")

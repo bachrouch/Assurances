@@ -1,0 +1,20 @@
+form(role='form', novalidate)
+  .row
+    .col-sm-3.form-group
+      label.control-label Tarif Plancher
+      .checkbox
+        label
+          input(type='checkbox',
+            ng-model='policy.admin.useFloorRate')
+          | Appliquer
+    .col-sm-3.form-group
+      label.control-label Commission
+      input.form-control(type='number',
+        min=0,
+        max=1,
+        ng-model='policy.admin.com')
+    .col-sm-3.form-group
+      label.control-label Frais
+      input.form-control(type='number',
+        min=0,
+        ng-model='policy.admin.fees')

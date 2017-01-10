@@ -1,0 +1,15 @@
+extends /layouts/main-bb
+
+block append style
+  link(href='/css/index.css', rel='stylesheet')
+  link(rel='icon', href='/img/ico.ico')
+
+block append templates
+  include /helpers/common-templates
+  include /helpers/connection-templates
+  include /helpers/index-templates
+
+block append scripts
+  script(src='/js/common.js')
+  script(src='/js/connection.js')
+  script(src='/js/index.js')

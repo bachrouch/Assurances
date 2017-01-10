@@ -1,0 +1,4 @@
+td(data-values='receiptRef')!= '<%= receiptRef%>'
+td(data-values='reviewDate')!= '<%= _.beautifyDate(reviewDate)%>'
+td 
+  a.btn.btn-danger.glyphicon.glyphicon-remove.btn-sm(type = 'button' ,data-actions='erase')

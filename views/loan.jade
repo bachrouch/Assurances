@@ -1,0 +1,17 @@
+extends /layouts/main-bb
+
+block append style
+  link(href='/css/loan.css', rel='stylesheet')
+  link(rel='icon', href='/img/ico.ico')
+
+block append templates
+  include /helpers/common-templates
+  include /helpers/connection-templates
+  include /helpers/actors-templates
+  include /helpers/loan-templates
+
+block append scripts
+  script(src='/js/common.js')
+  script(src='/js/connection.js')
+  script(src='/js/actors.js')
+  script(src='/js/loan.js')

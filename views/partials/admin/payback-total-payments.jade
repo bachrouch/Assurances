@@ -1,0 +1,8 @@
+table.table.table-striped
+  thead
+    tr
+      td(class='quarter')
+      td(class = 'td-TotalBold') Total
+      td(class = 'quarter',data-values='balance')!= '<%= _.beautifyAmount(balance)%>'
+      td(class = 'quarter',data-values='commission')!= '<%= _.beautifyAmount(commission())%>'
+      td(class = 'quarter',data-values='commissionToPay')!= '<%= _.beautifyAmount(commissionToPay())%>'

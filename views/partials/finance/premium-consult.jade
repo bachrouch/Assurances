@@ -1,0 +1,20 @@
+table.table.summary
+    tr
+      th.premium-header Souscripteur
+      td.premium-header!= '<%= subscriberName %>'
+table.table.summary
+    tr
+      th.premium N° Contrat
+      td.premium!= '<%= contract %>'
+      th.premium N° Avenant
+      td.premium!= '<%= endorsement %>'
+table.table.summary
+    tr
+      th.premium Produit
+      td.premium!= '<%= product %>'
+table.table.summary
+    tr
+      th.premium Date d'effet
+      td.premium!= '<%= _.beautifyDate(fromDate) %>'
+      th.premium Date de fin
+      td.premium!= '<%= _.beautifyDate(toDate) %>'

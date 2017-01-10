@@ -1,0 +1,17 @@
+form(role='form', novalidate)
+  .col-sm-3.form-group
+    label.control-label Titre
+    select.form-control(ng-model='policy.insured.gender',
+      ng-options='v.code as v.label for v in enums.actor.genders')
+  .col-sm-3.form-group
+    label.control-label Date de naissance
+    input.form-control(type='date',
+      ng-model='policy.insured.birthDate')
+  .col-sm-3.form-group
+    label.control-label Profession
+    input.form-control(type='string',
+      ng-model='policy.insured.job')
+  .col-sm-3.form-group
+    label.control-label Palier d'imposition
+    select.form-control(ng-model='policy.insured.taxRate', 
+      ng-options='v.code as v.label for v in enums.savings.taxes')

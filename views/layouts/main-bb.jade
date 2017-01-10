@@ -1,0 +1,27 @@
+doctype html
+html(lang='fr')
+
+  head
+    meta(charset='utf-8')
+    title= title
+    block style
+      include /helpers/vendorCSS-bb
+      link(href='/css/common.css', rel='stylesheet')
+      if test
+        link(href='/css/test.css', rel='stylesheet')
+
+  body
+
+    block header
+      include /helpers/header-bb
+
+    block content
+      include /helpers/content-bb
+
+    block footer
+      include /helpers/footer
+
+    block templates
+    block scripts
+      include /helpers/vendorJS-bb
+      script(src='/js/app.js')

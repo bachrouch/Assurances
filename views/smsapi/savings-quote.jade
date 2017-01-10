@@ -1,0 +1,47 @@
+include /smsapi/mixins/savings-policy-view-summary
+include /smsapi/mixins/savings-policy-view-chart
+include /smsapi/mixins/savings-policy-view-sits
+#savings-quote
+  .page-header: h3 Devis d'assurance vie {{policy.def.ref}} - {{policy.def.user.fullName}}
+  .col-sm-10.process-form
+    include /smsapi/partials/savings-error
+    .row
+      .col-sm-6
+        .list-group
+          a.list-group-item
+            h4.list-group-item-heading Devis
+            .list-group-item-text
+              include /smsapi/partials/savings-policy-view-def
+          a.list-group-item
+            h4.list-group-item-heading Souscripteur
+            .list-group-item-text
+              include /smsapi/partials/savings-policy-view-subscriber
+          a.list-group-item
+            h4.list-group-item-heading Assuré
+            .list-group-item-text
+              include /smsapi/partials/savings-policy-view-insured
+      .col-sm-6
+        .list-group
+          a.list-group-item
+            h4.list-group-item-heading Versement initial
+            .list-group-item-text
+              include /smsapi/partials/savings-policy-view-ini-dep
+          a.list-group-item
+            h4.list-group-item-heading Versements périodiques
+            .list-group-item-text
+              include /smsapi/partials/savings-policy-view-per-dep
+          a.list-group-item
+            h4.list-group-item-heading Prévoyance
+            .list-group-item-text
+              include /smsapi/partials/savings-policy-view-terms
+    .row
+      h3 Prévision de l'évolution de l'épargne
+    .panel.panel-default
+      .panel-body
+        .col-sm-6
+          +savings_policy_view_summary('quote')
+        .col-sm-6
+          +savings_policy_view_chart('quote')
+    +savings_policy_view_sits('quote')
+  .col-sm-2.process-act
+    include /smsapi/partials/savings-act-quote

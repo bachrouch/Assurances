@@ -1,0 +1,21 @@
+include /family/mixins/savings-policy-view-mvts
+#savings-subscribe-admin
+  .page-header: h3 Paramètrage d'une assurance vie
+  .col-sm-10.process-form
+    include /family/partials/savings-error
+    accordion(close-others='true')
+      accordion-group(heading='Paramétrage de l\'épargne')
+        include /family/partials/savings-policy-form-admin-dep
+    accordion(close-others='true')
+      accordion-group(heading='Paramétrage de la prévoyance')
+        include /family/partials/savings-policy-form-admin-term
+    accordion(close-others='true')
+      accordion-group(heading='Paramétrage général')
+        include /family/partials/savings-policy-form-admin-gen
+    .panel.panel-default
+      .panel-heading
+        h4.panel-title Détails des mouvements
+      .panel-body
+        +savings_policy_view_mvts('draft')
+  .col-sm-2.process-act
+    include /family/partials/savings-act-subscribe-admin

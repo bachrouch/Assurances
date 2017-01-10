@@ -1,0 +1,8 @@
+td(data-values='mode')!= '<%= updateSettlementMode() %>'
+td(data-values='amount')!= '<%= _.beautifyAmount(amount, true) %>'
+td(data-values='num')!= '<%= num %>'
+td(data-values='bank')!= '<%= bank %>'
+td(data-values='date')!= '<%= _.beautifyDate(date) %>'
+td
+  a(type = 'button' ,data-actions='erase')
+    span.glyphicon.glyphicon-remove.btn-danger.btn-xs

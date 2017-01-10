@@ -1,0 +1,6 @@
+td(data-values='code')!= '<%= code %>'
+td(data-values='coverName')!= '<%= coverName() %>'
+td(data-values='amount')!= '<%= _.beautifyAmount(amount) %>'
+td(data-values='commission')!= '<%= _.beautifyAmount(commission) %>'
+td(data-values='calcCommission')!= '<%= _.beautifyAmount(calcCommission) %>'
+td(data-values='percentComm')!= '<%= _.beautifyPercent(percentComm()) %>'

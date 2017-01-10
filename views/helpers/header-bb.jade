@@ -1,0 +1,36 @@
+mixin renderItems (nav)
+  a.dropdown-toggle(href=nav.path, data-toggle='dropdown')= nav.label + ' '
+    b.caret
+  ul.dropdown-menu
+    - each item in nav.items
+      li: a(href=item.path)= item.label
+
+.navbar.navbar-inverse.navbar-fixed-top
+  .container
+    .navbar-header
+      a(href='/')
+        img(src='img/alikSys.png')
+      button.navbar-toggle(type='button', data-toggle='collapse', data-target='.tkf-main-nav')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+    .collapse.navbar-collapse.tkf-main-nav(role='navigation')
+      ul.nav.navbar-nav
+        - each nav in navs
+          - if (nav.items) {
+            - if (nav.active) {
+              li.dropdown.active
+                +renderItems(nav)
+            - } else {
+              li.dropdown
+                +renderItems(nav)
+            - }
+          - } else {
+            - if (nav.active) {
+              li.active: a(href=nav.path)= nav.label
+            - } else {
+              li: a(href=nav.path)= nav.label
+            - }
+          - }
+      .navbar-right#connection-region

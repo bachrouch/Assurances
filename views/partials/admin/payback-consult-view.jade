@@ -1,0 +1,23 @@
+.row.page-header
+  .col-sm-6.tkf-header: h3 Feuille de remboursement N° <%= paybackReference() %>
+  .col-sm-6.tkf-actions
+.row
+  .col-sm-4
+    .panel.panel-default
+      .panel-heading: h3.panel-title Synthèse
+      .tkf-summary-payback
+  .col-sm-4
+    .panel.panel-default
+      .panel-heading: h3.panel-title Montants
+      .tkf-payback-amounts  
+  .col-sm-4
+    .panel.panel-default
+      .panel-heading: h3.panel-title Soldes
+      .tkf-payback-balance 
+.panel.panel-default
+  .panel-heading: h3.panel-title Feuilles de caisse
+  .panel-body.tkf-listPayments
+  .tkf-totalPayments
+ .panel.panel-default
+  .panel-heading: h3.panel-title Règlements
+  .panel-body.tkf-settlementsList

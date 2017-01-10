@@ -1,0 +1,29 @@
+div.panel.panel-default
+  table.table
+    tr
+      th Contr. à payer
+      td(align='right')!= '<%= _.beautifyAmount(affected()) %>'
+    tr
+      th Commission
+      td(align='right')!= '<%= _.beautifyAmount(commission()) %>'
+    tr
+      th Net à payer
+      td(align='right')!= '<%= _.beautifyAmount(toPay()) %>'
+    tr
+      th RAS
+      td(align='right')!= '<%= _.beautifyAmount(ras()) %>'
+    tr
+      th Contr. payée
+      td(align='right')!= '<%= _.beautifyAmount(paid()) %>'
+    tr
+      th
+      td
+  table.table
+    .col-sm-6
+      a.btn.btn-block.btn-success(data-actions='save' id='action') Enregistrer
+    .col-sm-6
+      a.btn.btn-block.btn-danger(data-actions='finalize' id='action') Clôturer
+    .col-sm-12
+      a.btn.btn-block.btn-warning(data-actions='paymentRequest' id='paymentRequest') Requête siège
+    .col-sm-12
+

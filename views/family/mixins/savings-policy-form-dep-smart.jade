@@ -1,0 +1,30 @@
+mixin savings_policy_form_dep_smart(obj)
+  form(role='form',
+    ng-controller='SavingsPolicyDepSmart',
+    ng-init='init("' + obj + '")',
+    novalidate)
+    .row
+      .col-sm-4.form-group
+        label.control-label Versement initial
+        input.form-control(type='number', min=0,
+          ng-model='policy.deposit.initial')
+      .col-sm-4.form-group
+        label.control-label Versement périodique
+        input.form-control(type='number', min=0,
+          ng-model='policy.deposit.periodic')
+      .col-sm-4.form-group
+        label.control-label Majoration annuelle
+        select.form-control(ng-model='policy.deposit.updateRate',
+          ng-options='v.code as v.label for v in enums.savings.updates')
+    .row
+      .col-sm-4.form-group
+        label.control-label Fréquence de versement
+        select.form-control(ng-model='policy.deposit.period',
+          ng-options='v.code as v.label for v in enums.policy.periods')
+      .col-sm-4.form-group
+        label.control-label Date première échéance
+        select.form-control(ng-model='debitDay',
+          ng-options='v.code as v.label for v in enums.finance.debitDays')
+      .col-sm-4.form-group
+        label Date première échéance
+        p.form-control-static {{deposit.nextDate | date : 'shortDate'}}

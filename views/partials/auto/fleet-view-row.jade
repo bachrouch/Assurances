@@ -1,0 +1,11 @@
+tr
+  td(data-values='number')!= '<%= number %>'
+  td(data-values='registrationNumber')!= '<%= registrationNumber %>'
+  td(data-values='usageDesc')!= '<%= usageDesc %>'
+  td(data-values='power')!= '<%= power %>'
+  td(data-values='placesNumber')!= '<%= placesNumber %>'
+  td(data-values='updatedValue')!= '<%= _.beautifyAmount(updatedValue) %>'
+  td(data-values='premium')!= '<%= _.beautifyAmount(premium) %>'
+  td
+    a(type = 'button', data-actions='covers')
+      span.glyphicon.glyphicon-list.btn-success.btn-sm

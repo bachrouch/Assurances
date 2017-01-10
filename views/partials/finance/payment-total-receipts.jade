@@ -1,0 +1,10 @@
+table.table.table-striped
+  thead
+    tr
+      td(class = 'td-Contract')
+      td(class='td-Reference')
+      td
+      td(class = 'td-TotalBold') Total
+      td(class = 'td-ToAffect',data-values='affected')!= '<%= _.beautifyAmount(affected())%>'
+      td(class = 'td-CommissionAffected',data-values='commission')!= '<%= _.beautifyAmount(commission())%>'
+      td(class = 'td-ToPay',data-values='toPay')!= '<%= _.beautifyAmount(toPay())%>'

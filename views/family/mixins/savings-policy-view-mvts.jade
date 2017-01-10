@@ -1,0 +1,32 @@
+mixin savings_policy_view_mvts(obj)
+  div(ng-controller='SavingsPolicyMvtsCtrl', ng-init='init("' + obj + '")')
+    form.form-inline(role='form', novalidate)
+      .col-sm-3.form-group
+        label Année
+        select.form-control(ng-model='year',
+          ng-options='year for year in computed.years')
+          option(value='') Toutes
+      .col-sm-3.form-group
+        label Type
+        select.form-control(ng-model='type',
+          ng-options='v.code as v.label for v in enums.savings.mvts')
+          option(value='') Tous
+      .col-sm-4
+        .form-horizontal
+          .form-group
+            label.col-sm-4.control-label Total
+            .col-sm-8: p.form-control-static
+              | {{computed.total| currency : '' : 3}}
+    table.table.table-condensed.table-striped
+      thead
+        tr
+          th Date
+          th Type
+          th Montant
+          th Opération
+      tbody
+        tr(ng-repeat='mvt in computed.mvts')
+          td {{mvt.date | date : 'shortDate'}}
+          td {{mvt.type | savingsMvt}}
+          td {{mvt.amount | currency : 'DT' : 3}}
+          td {{mvt.name}}

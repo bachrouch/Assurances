@@ -1,0 +1,52 @@
+mixin savings_policy_form_subscriber(obj)
+  form(role='form',
+    ng-controller='SavingsPolicySubscriberCtrl', ng-init='init("' + obj + '")',
+    novalidate)
+    .row
+      .col-sm-4.form-group
+        label.control-label C.I.N
+        .input-group
+          input.form-control(type='text',
+            ng-model='subscriber.id')
+          span.input-group-btn
+            button.btn.btn-default.glyphicon.glyphicon-check(type='button', ng-click='subscriberFromId()')
+      .col-sm-4.form-group
+        .input-group
+          p.form-control-static
+            | {{error}}
+    fieldset(ng-disabled='existing')
+      .row
+        .col-sm-3.form-group
+          label.control-label Titre
+          select.form-control(ng-model='subscriber.gender',
+            ng-options='v.code as v.label for v in enums.actor.genders')
+        .col-sm-3.form-group
+          label.control-label Prénom
+          input.form-control(type='text',
+          ng-model='subscriber.firstName')
+        .col-sm-3.form-group
+          label.control-label Nom
+          input.form-control(type='text',
+          ng-model='subscriber.name')
+        .col-sm-3.form-group
+          label.control-label Date de naissance
+          input.form-control(type='date',
+          ng-model='subscriber.birthDate')
+      .row
+        .col-sm-4.form-group
+          label.control-label Téléphone
+          input.form-control(type='text',
+          ng-model='subscriber.phone')
+        .col-sm-4.form-group
+          label.control-label Mobile
+          input.form-control(type='text',
+          ng-model='subscriber.mobile')
+        .col-sm-4.form-group
+          label.control-label Email
+          input.form-control(type='email',
+          ng-model='subscriber.email')
+      .row
+        .col-sm-12.form-group
+          label.control-label Adresse
+          input.form-control(type='text',
+          ng-model='subscriber.address')
